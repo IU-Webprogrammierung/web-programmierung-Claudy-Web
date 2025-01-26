@@ -9,3 +9,31 @@ h1 {
     color:white;
     padding: 1rem;
 }
+
+
+/* Grundlegende Gestaltung der Navigation */
+nav, footer {
+    background-color: steelblue;
+    color: white;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+nav li {
+    display: inline;
+    margin-right: 0.5rem;
+}
+nav a,
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer {
+    text-align: right;
+}
+html {
+    scroll-behavior: smooth;
+}
