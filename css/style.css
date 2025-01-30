@@ -5,15 +5,32 @@ body {
     color: black;
 }
 h1 {
-    background-color: steelblue;
-    color:white;
+
     padding: 1rem;
 }
+footer,
+header,
+nav {
+    background-color:teal;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 0;
+}
+footer {
+    text-align: right;
+}
 
+/* Scroll-Effekt für die Seiten */
+html {
+    scroll-behavior: smooth;
+}
 
 /* Grundlegende Gestaltung der Navigation */
-nav, footer {
-    background-color: steelblue;
+footer {
+    background-color:teal;
     color: white;
     padding: 0.5rem;
     margin: 1rem 0;
@@ -24,16 +41,10 @@ nav ul {
 }
 nav li {
     display: inline;
-    margin-right: 0.5rem;
+    margin: 2rem;
 }
 nav a,
 footer a {
     color: white;
     text-decoration: none;
-}
-footer {
-    text-align: right;
-}
-html {
-    scroll-behavior: smooth;
 }
