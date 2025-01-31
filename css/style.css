@@ -8,19 +8,26 @@ h1 {
 
     padding: 1rem;
 }
-footer,
-header,
-nav {
+.site-footer,
+.site-header,
+.site-nav {
     background-color:teal;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
 }
-header h1 {
+.site-header h1 {
     margin-bottom: 0;
 }
-footer {
-    text-align: right;
+.rasenpflege img {
+    align;
+    width: 100%;
+    height: auto;
+}
+.site-content {
+    margin: 0 auto;
+    width: 90%;
+    padding: 2rem;
 }
 
 /* Scroll-Effekt für die Seiten */
@@ -29,22 +36,18 @@ html {
 }
 
 /* Grundlegende Gestaltung der Navigation */
-footer {
-    background-color:teal;
-    color: white;
-    padding: 0.5rem;
-    margin: 1rem 0;
-}
-nav ul {
+.site-footer ul,
+.site-nav ul {
     padding: 0;
     margin: 0;
 }
-nav li {
+.site-footer li,
+.site-nav li {
     display: inline;
     margin: 2rem;
 }
-nav a,
-footer a {
+.site-nav a,
+.site-footer a {
     color: white;
     text-decoration: none;
 }
