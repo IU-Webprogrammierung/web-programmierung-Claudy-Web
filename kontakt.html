@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <!-- Infos über diese Webseite -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <!-- Titel der Webseite -->
+        <title>Hausmeisterdienste</title>
+        
+        <!-- Beschreibung der Webseite -->
+        <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
+        Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
+        Winterdienst umfasst.">
+    
+        <!-- Die Verbindung zum Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="site-header">
+            <table>
+                <tr>
+                    <td>
+                        <h1>Hausmeisterdienste</h1>
+                    </td>
+                    <td>
+                        <div class="Logo">
+                            <img src="pictures/Logo_weiß.svg" alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon."
+                            width="75" height="75">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </header>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="#">Leistungen</a></li>
+                <li><a href="#">Unsere Firma</a></li>
+                <li><a href="kontakt.html" class="current">Kontakt</a></li>
+            </ul>
+        </nav>
+        <main class="site-kontakt">
+            <form action="" method="post">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="betreff">Betreff</label>
+                    <input type="betreff" id="betreff" name="betreff" required>
+                </div>
+                <div>
+                    <label for="nachricht">Nachricht (Optional)</label>
+                    <textarea name="nachricht" id="nachricht" cols="20" rows="5"></textarea>
+                </div>
+            </form>
+            <p><button type="submit" value="nummer1">Senden</button></p>
+        </main>
+    </body>
+    <footer class="site-footer">
+        <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Impressum</a></li>
+        </ul>
+    </footer>
+</html>

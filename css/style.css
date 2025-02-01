@@ -20,7 +20,6 @@ h1 {
     margin-bottom: 0;
 }
 .rasenpflege img {
-    align;
     width: 100%;
     height: auto;
 }
@@ -28,6 +27,9 @@ h1 {
     margin: 0 auto;
     width: 90%;
     padding: 2rem;
+}
+.table-content td {
+    padding: 1rem;
 }
 
 /* Scroll-Effekt für die Seiten */
@@ -50,4 +52,23 @@ html {
 .site-footer a {
     color: white;
     text-decoration: none;
+}
+.site-nav .current {
+    font-weight: bold;
+    font-size:x-large;
+}
+
+/* Gestaltung für Kontaktseite */
+.site-kontakt label {
+    display: block;
+}
+.site-kontakt form div {
+    margin-bottom: 1rem;
+}
+.site-kontakt button {
+    background-color:teal;
+    color: white; 
+    padding: 0.5rem;
+    border: none; 
+    cursor: pointer;
 }
