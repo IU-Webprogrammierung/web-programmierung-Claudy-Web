@@ -8,13 +8,21 @@ h1 {
 
     padding: 1rem;
 }
-.site-footer,
-.site-header,
+.site-header {
+    background-color:teal;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
 .site-nav {
     background-color:teal;
     color: white;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 15vh;
 }
 .site-header h1 {
     margin-bottom: 0;
@@ -24,12 +32,37 @@ h1 {
     height: auto;
 }
 .site-content {
-    margin: 0 auto;
     width: 90%;
-    padding: 2rem;
+    padding: 0rem;
+    margin-top: 20rem;
+}
+.site-footer {
+    background-color:teal;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+.table-content {
+    padding: auto;
+    display: table;
+    width: 100%;
 }
 .table-content td {
-    padding: 1rem;
+    display: table-cell;
+    padding-left: 1rem;
+    vertical-align: top;
+    margin: 0;
+}
+.table-content p {
+    margin: 0;
+}
+.startbild {
+    position: relative;
+    background-position: center top;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 2rem;
 }
 
 /* Scroll-Effekt für die Seiten */
