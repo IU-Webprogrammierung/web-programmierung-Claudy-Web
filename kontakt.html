@@ -1,88 +1,93 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <!-- Infos über diese Webseite -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <!-- Titel der Webseite -->
-        <title>Hausmeisterdienste</title>
-        
-        <!-- Beschreibung der Webseite -->
-        <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
+
+<head>
+    <!-- Infos über diese Webseite -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon/favicon96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Hausmeisterdienste" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <!-- Titel der Webseite -->
+    <title>Hausmeisterdienste</title>
+
+    <!-- Beschreibung der Webseite -->
+    <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
         Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
         Winterdienst umfasst.">
-    
-        <!-- Die Verbindung zum Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="site-header">
-            <table>
-                <tr>
-                    <td>
-                        <h1>Hausmeisterdienste</h1>
-                    </td>
-                    <td>
-                        <div class="Logo">
-                            <img src="pictures/LogoWeißTransparent.svg" alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon."
-                            width="75" height="75">
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </header>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="#">Leistungen</a></li>
-                <li><a href="#">Unsere Firma</a></li>
-                <li><a href="kontakt.html" class="current">Kontakt</a></li>
-            </ul>
-        </nav>
-        <main class="site-kontakt">
-            <form action="" method="post">
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">E-Mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div>
-                    <label for="betreff">Betreff</label>
-                    <input type="betreff" id="betreff" name="betreff" required>
-                </div>
-                <div>
-                    <label for="nachricht">Nachricht (Optional)</label>
-                    <textarea name="nachricht" id="nachricht" cols="20" rows="5"></textarea>
-                </div>
-            </form>
-            <p><button type="submit" value="nummer1">Senden</button></p>
-            <img class="bilder-content"
-                    src="pictures/Telefon50x50.png"
-                    alt="Telefonhörer-Zeichen"
-                    srcset="pictures/Telefon100x100.png 2x">
-            <p>+49 1234 56789</p>
-            <img class="bilder-content"
-                src="pictures/Mail50x50.png"
-                alt="At-Zeichen für E-Mail"
-                srcset="pictures/Mail100x100.png 2x">
-            <p>info@mail.de</p>
-            <img class="bilder-content"
-                src="pictures/Haus50x50.png"
-                alt="Haus-Zeichen für die Adresse"
-                srcset="pictures/Haus100x100.png 2x">
-            <p>Straße 1</p>
-            <p>12345 Musterstadt</p>
-        </main>
-    </body>
-    <footer class="site-footer">
+
+    <!-- Die Verbindung zum Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <table>
+            <tr>
+                <td>
+                    <h1>Hausmeisterdienste</h1>
+                </td>
+                <td>
+                    <div class="Logo">
+                        <img src="pictures/LogoWeißTransparent.svg"
+                            alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon." width="75" height="75">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <nav class="site-nav">
         <ul>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Impressum</a></li>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="#">Leistungen</a></li>
+            <li><a href="#">Unsere Firma</a></li>
+            <li><a href="kontakt.html" class="current">Kontakt</a></li>
         </ul>
-    </footer>
+    </nav>
+    <main class="site-kontakt">
+        <form action="" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="betreff">Betreff</label>
+                <input type="betreff" id="betreff" name="betreff" required>
+            </div>
+            <div>
+                <label for="nachricht">Nachricht (Optional)</label>
+                <textarea name="nachricht" id="nachricht" cols="20" rows="5"></textarea>
+            </div>
+        </form>
+        <p><button type="submit" value="nummer1">Senden</button></p>
+        <img class="bilder-content" src="pictures/Telefon50x50.png" alt="Telefonhörer-Zeichen"
+            srcset="pictures/Telefon100x100.png 2x">
+        <p>+49 1234 56789</p>
+        <img class="bilder-content" src="pictures/Mail50x50.png" alt="At-Zeichen für E-Mail"
+            srcset="pictures/Mail100x100.png 2x">
+        <p>info@mail.de</p>
+        <img class="bilder-content" src="pictures/Haus50x50.png" alt="Haus-Zeichen für die Adresse"
+            srcset="pictures/Haus100x100.png 2x">
+        <p>Straße 1</p>
+        <p>12345 Musterstadt</p>
+    </main>
+</body>
+<footer class="site-footer">
+    <ul>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="#">Impressum</a></li>
+    </ul>
+</footer>
+
 </html>
