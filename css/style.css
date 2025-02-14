@@ -1,8 +1,23 @@
-/* Stylesheet für die Website */
+/* ================================
+    Stylesheet für die Website
 
+    Abschnitte im Stylesheet:
+    1. Basiseinstellungen
+    2. Navigation
+    3. Kontaktseite
+*/
+
+
+/**
+  * 1. Basiseinstellungen
+  */
 body {
     background-color:floralwhite;
     color: black;
+    margin: 0rem;
+
+    /* Bereiche anzeigen */
+    /* * { outline: 1px solid red; } */
 }
 h1 {
     padding: 1rem;
@@ -26,6 +41,9 @@ h1 {
 .site-header h1 {
     margin-bottom: 0;
 }
+.site-content {
+    margin: 1rem;
+}
 .rasenpflege img {
     width: 100%;
     height: auto;
@@ -33,7 +51,7 @@ h1 {
 .site-content-start {
     width: 90%;
     padding: 0rem;
-    margin-top: 20rem;
+    margin-top: 30rem;
 }
 .site-footer {
     background-color:teal;
@@ -71,7 +89,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Grundlegende Gestaltung der Navigation */
+/**
+  * 2. Navigation
+  */
 .site-footer ul,
 .site-nav ul {
     padding: 0;
@@ -87,12 +107,17 @@ html {
     color: white;
     text-decoration: none;
 }
-.site-nav .current {
+.site-nav .current, .site-footer .current {
     font-weight: bold;
     font-size:x-large;
 }
 
-/* Gestaltung für Kontaktseite */
+/**
+  * 3. Kontaktseite
+  */
+  .site-kontakt {
+    margin: 1rem;
+  }
 .site-kontakt label {
     display: block;
 }

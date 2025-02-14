@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="top">
 
 <head>
     <!-- Infos über diese Webseite -->
@@ -19,11 +19,12 @@
 
     <!-- Beschreibung der Webseite -->
     <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
-        Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
-        Winterdienst umfasst.">
+    Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
+    Winterdienst umfasst.">
 
     <!-- Die Verbindung zum Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -45,46 +46,18 @@
     <nav class="site-nav">
         <ul>
             <li><a href="index.html">Startseite</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="leistungen.html" class="current">Leistungen</a></li>
             <li><a href="firma.html">Unsere Firma</a></li>
-            <li><a href="kontakt.html" class="current">Kontakt</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
-    <main class="site-kontakt">
-        <form action="" method="post">
-            <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="betreff">Betreff</label>
-                <input type="betreff" id="betreff" name="betreff" required>
-            </div>
-            <div>
-                <label for="nachricht">Nachricht (Optional)</label>
-                <textarea name="nachricht" id="nachricht" cols="20" rows="5"></textarea>
-            </div>
-        </form>
-        <p><button type="submit" value="nummer1">Senden</button></p>
-        <img class="bilder-content" src="pictures/Telefon50x50.png" alt="Telefonhörer-Zeichen"
-            srcset="pictures/Telefon100x100.png 2x">
-        <p>+49 1234 56789</p>
-        <img class="bilder-content" src="pictures/Mail50x50.png" alt="At-Zeichen für E-Mail"
-            srcset="pictures/Mail100x100.png 2x">
-        <p>info@mail.de</p>
-        <img class="bilder-content" src="pictures/Haus50x50.png" alt="Haus-Zeichen für die Adresse"
-            srcset="pictures/Haus100x100.png 2x">
-        <p>Straße 1</p>
-        <p>12345 Musterstadt</p>
+    <main class="site-content-start" id="content">
+
     </main>
 </body>
 <footer class="site-footer">
     <ul>
-        <li><a href="kontakt.html" class="current">Kontakt</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="datenschutz.html">Datenschutz</a></li>
         <li><a href="impressum.html">Impressum</a></li>
     </ul>
