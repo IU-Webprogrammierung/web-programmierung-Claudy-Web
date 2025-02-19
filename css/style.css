@@ -11,13 +11,55 @@
 /**
   * 1. Basiseinstellungen
   */
+  @media screen and (min-width: 40em) {
+    .titel {
+      width:50%;
+    }
+  }
+  @media screen and (min-width: 75em) {
+    .titel {
+      width:33.333%;
+    }
+  }
+  .titel > a {
+    display: flex;
+    align-items: center;
+  }
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
 body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 500;
+    font-style: normal;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    hyphens: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
     background-color:floralwhite;
     color: black;
-    margin: 0rem;
+    padding: 0rem 0rem;
+    margin:0rem 0;
 
     /* Bereiche anzeigen */
     /* * { outline: 1px solid red; } */
+}
+main {
+    flex: 1;
+    padding: 1rem;
+}
+.site-body-start {
+    padding-bottom: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
 h1 {
     padding: 1rem;
@@ -27,12 +69,22 @@ h1 {
     color: white;
     padding: 1rem;
     text-align: center;
+    display:flex;
+    flex-wrap: wrap;
 }
-.site-nav {
+.site-header > * {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.site-nav,
+.site-footer,
+.site-footer-start {
     background-color:teal;
     color: white;
     padding: 1rem;
     text-align: center;
+}
+.site-nav {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -41,75 +93,62 @@ h1 {
 .site-header h1 {
     margin-bottom: 0;
 }
-.site-content {
-    margin: 1rem;
-}
 .rasenpflege img {
     width: 100%;
     height: auto;
 }
-.site-content-start {
-    width: 90%;
-    padding: 0rem;
-    margin-top: 30rem;
-}
-.site-footer {
-    background-color:teal;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-}
-.table-content {
-    padding: auto;
-    display: table;
-    width: 100%;
-}
 .table-content td {
     display: table-cell;
-    padding-left: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     vertical-align: top;
-    margin: 0;
-}
-.table-content p {
-    margin: 0;
 }
 .startbild {
-    position: relative;
-    background-position: center top;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    margin-top: 2rem;
-    width: 100%;
-    height: auto;
+    margin: 2rem;
 }
-
-/* Scroll-Effekt für die Seiten */
-html {
-    scroll-behavior: smooth;
+/* Collapsing margins vermeiden */
+h1, h2, h3, h4, h5, h6, 
+p, ul, ol {
+    margin-top: 0; 
 }
 
 /**
   * 2. Navigation
   */
 .site-footer ul,
-.site-nav ul {
+.site-nav ul,
+.site-footer-start ul {
     padding: 0;
     margin: 0;
 }
 .site-footer li,
-.site-nav li {
+.site-nav li,
+.site-footer-start li {
     display: inline;
     margin: 2rem;
 }
 .site-nav a,
-.site-footer a {
+.site-footer a,
+.site-footer-start a {
     color: white;
     text-decoration: none;
 }
-.site-nav .current, .site-footer .current {
+.site-nav .current,
+.site-footer .current,
+.site-footer-start current {
     font-weight: bold;
     font-size:x-large;
+}
+.site-nav a:hover, 
+.site-nav a:focus,
+.site-footer a:hover, 
+.site-footer a:focus,
+.site-footer-start a:hover,
+.site-footer-start a:focus { 
+    color:sandybrown;
 }
 
 /**
