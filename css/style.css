@@ -105,7 +105,6 @@ h1 {
 }
 .startbild {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: 2rem;
 }
@@ -163,10 +162,47 @@ p, ul, ol {
 .site-kontakt form div {
     margin-bottom: 1rem;
 }
+/* Eingabefelder gestalten */ 
+.site-kontakt input[type="text"], 
+.site-kontakt input[type="email"],
+.site-kontakt input[type="betreff"],  
+.site-kontakt textarea {
+    font-size: inherit;
+    font-family: inherit;
+
+    width: 16rem;
+    padding: 0.5rem;
+    
+    border: 1px solid dimgrey;
+    border-radius: 0.25rem;
+}
+.site-kontakt input[type="text"]:focus, 
+.site-kontakt input[type="email"]:focus,
+.site-kontakt input[type="betreff"]:focus, 
+.site-kontakt textarea:focus {
+    background-color: white;
+}
+/* Textarea - Breite begrenzen */ 
+.site-kontakt textarea {
+    max-width: 25rem; 
+    min-height: 8rem;
+}
 .site-kontakt button {
+    font-size: inherit; 
+    font-family: inherit; 
+    text-align: center;
+
     background-color:teal;
     color: white; 
-    padding: 0.5rem;
-    border: none; 
+
+    width: 17rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.25rem;
+
     cursor: pointer;
+}
+ .site-kontakt button:hover,
+ .site-kontakt button:focus {
+    background-color: sandybrown;
 }
