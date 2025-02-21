@@ -7,7 +7,6 @@
     3. Kontaktseite
 */
 
-
 /**
   * 1. Basiseinstellungen
   */
@@ -28,6 +27,7 @@
   }
   html {
     scroll-behavior: smooth;
+    background-color: transparent; 
     height: 100%;
   }
 body {
@@ -45,14 +45,21 @@ body {
     background-color:floralwhite;
     color: black;
 
+    max-width: none;
     height: 100%;
     flex-direction: column;
-    padding: 0rem 0rem;
-    margin:0rem 0;
+    padding: 0;
+    margin:0;
 
     /* Bereiche anzeigen */
     /* * { outline: 1px solid red; } */
 }
+  /* Layoutbereiche in der Breite begrenzen und zentrieren */
+  .inside {
+    max-width: 650px; 
+    padding: 0 1rem; 
+    margin: 0 auto; 
+  }
 main {
     flex: 1;
     padding: 1rem;
@@ -90,6 +97,14 @@ h1 {
     padding: 1rem;
     text-align: center;
 }
+  /* Layoutbereiche - horizontale Innenabstände entfernen */
+  .site-header, 
+  .site-nav, 
+  .site-content, 
+  .site-footer { 
+    padding-left: 0; 
+    padding-right: 0; 
+  }
 .site-nav {
     background-size: cover;
     background-position: center top;

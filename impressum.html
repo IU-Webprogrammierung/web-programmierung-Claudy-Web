@@ -34,39 +34,53 @@
 
 <body>
     <header class="site-header">
-        <table>
-            <tr>
-                <td>
-                    <h1>Hausmeisterdienste</h1>
-                </td>
-                <td>
-                    <div class="Logo">
-                        <img src="pictures/LogoWeißTransparent.svg"
-                            alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon." width="75" height="75">
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <div class="inside">
+            <h1 class="titel">Hausmeisterdienste</h1>
+            <div class="logo">
+                <img src="pictures/LogoWeißTransparent.svg"
+                    alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon." width="75" height="75">
+            </div>
+        </div>
     </header>
     <nav class="site-nav">
-        <ul>
-            <li><a href="index.html">Startseite</a></li>
-            <li><a href="leistungen.html">Leistungen</a></li>
-            <li><a href="firma.html">Unsere Firma</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+        <div class="inside">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="leistungen.html">Leistungen</a></li>
+                <li><a href="firma.html">Unsere Firma</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
     <main class="site-content">
+        <div class="inside">
+            <article>
+                <h2>Impressum</h2>
+                <p>
+                    Name: Hausmeisterdienste<br>
+                    Strasse: Musterstrasse 123<br>
+                    Postleitzahl: 12345<br>
+                    Stadt: Musterstadt<br>
+                    Telefon: +49 123 4567890<br>
+                    E-Mail: info@hausmeisterdienste.de<br>
+                    Geschäftsführer: Mustermann und Musterfrau
+                </p>
+            </article>
+        </div>
 
 
     </main>
 </body>
 <footer class="site-footer">
-    <ul>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-        <li><a href="impressum.html" class="current">Impressum</a></li>
-    </ul>
+    <div class="inside">
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+                <li><a href="impressum.html" class="current">Impressum</a></li>
+            </ul>
+        </nav>
+    </div>
 </footer>
 
 </html>
