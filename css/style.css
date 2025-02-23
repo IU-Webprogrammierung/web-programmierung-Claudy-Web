@@ -4,22 +4,29 @@
     Abschnitte im Stylesheet:
     1. Basiseinstellungen
     2. Navigation
-    3. Kontaktseite
+    3. Startseite
+    4. Kontaktseite
+    5. Nützliche, allgemeine Klassen
 */
 
 /**
   * 1. Basiseinstellungen
   */
-  @media screen and (min-width: 40em) {
-    .titel {
-      width:50%;
+  @media print {
+
+    * { box-shadow: none !important; text-shadow: none !important; }
+
+    html {
+        background: white; 
+        color: black; 
+    }
+
+    .site-nav, 
+    .site-footer {
+        display: none; 
     }
   }
-  @media screen and (min-width: 75em) {
-    .titel {
-      width:33.333%;
-    }
-  }
+  
   .titel > a {
     display: flex;
 
@@ -56,16 +63,13 @@ body {
 }
   /* Layoutbereiche in der Breite begrenzen und zentrieren */
   .inside {
-    max-width: 650px; 
     padding: 0 1rem; 
     margin: 0 auto; 
   }
 main {
-    flex: 1;
+    flex-direction: column;
+    display: flex;
     padding: 1rem;
-}
-.site-body-start {
-    padding-bottom: 0;
 }
 img {
     max-width: 100%;
@@ -78,7 +82,7 @@ h1 {
     display:flex;
     flex-wrap: wrap;
 
-    text-align: center;
+    text-align: start;
 
     background-color:teal;
     color: white;
@@ -89,27 +93,29 @@ h1 {
     flex-grow: 1;
     flex-shrink: 1;
 }
+.site-header,
 .site-nav,
 .site-footer,
 .site-footer-start {
     background-color:teal;
     color: white;
     padding: 1rem;
-    text-align: center;
+    text-align: start;
 }
-  /* Layoutbereiche - horizontale Innenabstände entfernen */
-  .site-header, 
-  .site-nav, 
-  .site-content, 
-  .site-footer { 
-    padding-left: 0; 
-    padding-right: 0; 
-  }
+.logo {
+  display: flex;
+  padding: 1rem;
+
+  align-items: end;
+}
 .site-nav {
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height: 15vh;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 15vh;
 }
 .site-header h1 {
     margin-bottom: 0;
@@ -118,16 +124,30 @@ h1 {
     width: 100%;
     height: auto;
 }
-.startbild {
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-}
+
+
 /* Collapsing margins vermeiden */
 h1, h2, h3, h4, h5, h6, 
 p, ul, ol {
     margin-top: 0; 
 }
+
+    /* Umrechnung 768 Pixel / 16px = 48remm*/
+    @media screen and (min-width: 48rem) {
+
+      body {
+        font-size: 1.125rem;
+      }
+
+    }
+    /* Umrechnung 1024 Pixel / 16px = 64remm*/
+    @media screen and (min-width: 64rem) {
+
+      body {
+        font-size: 1.25rem;
+      }
+
+    }
 
 /**
   * 2. Navigation
@@ -174,7 +194,25 @@ p, ul, ol {
 }
 
 /**
-  * 3. Kontaktseite
+  * 3. Startseite
+  */
+  .site-body-start {
+    padding-bottom: 0;
+}
+.startbild {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  position: relative; 
+  bottom: 5rem;
+}
+.article-start {
+  position: relative;
+  bottom: 5rem;
+}
+
+/**
+  * 4. Kontaktseite
   */
   .site-kontakt {
     margin: 1rem;
@@ -229,3 +267,12 @@ p, ul, ol {
  .site-kontakt button:focus {
     background-color: sandybrown;
 }
+
+
+/**  
+  * 5. Nützliche, allgemeine Klassen
+  */
+
+  /* Klassen zum Floaten und Clearen */
+  .float-links { float: left; margin: 0 2rem 2rem 0; }
+  .float-stoppen { clear: both; }
