@@ -23,7 +23,7 @@
 
     .site-nav, 
     .site-footer {
-        display: none; 
+        display: none;
     }
   }
   
@@ -35,7 +35,7 @@
   html {
     scroll-behavior: smooth;
     background-color: transparent; 
-    height: 100%;
+    height:100vh;
   }
 body {
     display: flex;
@@ -53,10 +53,12 @@ body {
     color: black;
 
     max-width: none;
-    min-height: 100vh;
+    height: 100vh;
     flex-direction: column;
     padding: 0;
     margin:0;
+    flex-flow: column; 
+    min-height: 100vh;
 
     /* Bereiche anzeigen */
     /* * { outline: 1px solid red; } */
@@ -67,9 +69,8 @@ body {
     margin: 0 auto; 
   }
 main {
-    flex-direction: column;
-    display: flex;
     padding: 1rem;
+    flex: 1
 }
 img {
     max-width: 100%;
@@ -100,7 +101,7 @@ h1 {
     background-color:teal;
     color: white;
     padding: 1rem;
-    text-align: start;
+    text-align: center;
 }
 .logo {
   display: flex;
@@ -114,6 +115,9 @@ h1 {
 .rasenpflege img {
     width: 100%;
     height: auto;
+}
+.site-footer {
+  margin-bottom: auto;
 }
 
 
@@ -155,6 +159,8 @@ p, ul, ol {
 .site-nav ul,
 .site-footer-start ul {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 
     list-style: none;
 
@@ -173,7 +179,6 @@ p, ul, ol {
 .site-footer-start a {
     display: flex;
 
-    text-align: center;
     color: white;
     text-decoration: none;
 }
@@ -183,6 +188,7 @@ p, ul, ol {
     font-weight: bold;
     font-size:x-large;
 }
+/* Mauseffekt beim darüberfahren */ 
 .site-nav a:hover, 
 .site-nav a:focus,
 .site-footer a:hover, 
@@ -222,7 +228,7 @@ p, ul, ol {
 .site-kontakt form div {
     margin-bottom: 1rem;
 }
-/* Eingabefelder gestalten */ 
+/* Eingabefelder gestalten */
 .site-kontakt input[type="text"], 
 .site-kontakt input[type="email"],
 .site-kontakt input[type="betreff"],  
