@@ -120,6 +120,15 @@ h1 {
   margin-bottom: auto;
 }
 
+/* Bildergallerie */
+
+
+
+
+
+
+
+
 
 /* Collapsing margins vermeiden */
 h1, h2, h3, h4, h5, h6, 
@@ -211,6 +220,7 @@ p, ul, ol {
   /* position: relative; 
   bottom: 5rem; */
 }
+
 /* .article-start {
   position: relative;
   bottom: 5rem;
