@@ -79,29 +79,31 @@ img {
 h1 {
     padding: 1rem;
 }
+.site-header > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.site-nav,
+.site-footer,
+.site-footer-start {
+  background-color:teal;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 .site-header {
     display:flex;
     flex-wrap: wrap;
 
     text-align: start;
+    padding-left: 4rem;
 
     background-color:teal;
     color: white;
 
-    padding: 1rem;
-}
-.site-header > * {
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-.site-header,
-.site-nav,
-.site-footer,
-.site-footer-start {
-    background-color:teal;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 .logo {
   display: flex;
