@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" id="top">
+<html lang="de" class="no-js">
 
 <head>
     <!-- Infos über diese Webseite -->
@@ -30,7 +30,7 @@
 
     <!-- Die Verbindung zum Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <script src="script/javascript.js" async></script>
 </head>
 
 <body>
@@ -43,6 +43,7 @@
     </header>
     <nav class="site-nav">
         <div class="inside">
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
             <ul>
                 <li><a href="index.html">Startseite</a></li>
                 <li><a href="leistungen.html" class="current">Leistungen</a></li>

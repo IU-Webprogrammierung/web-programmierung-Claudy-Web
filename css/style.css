@@ -53,12 +53,12 @@ body {
     color: black;
 
     max-width: none;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
     padding: 0;
     margin:0;
     flex-flow: column; 
-    min-height: 100vh;
+
 
     /* Bereiche anzeigen */
     /* * { outline: 1px solid red; } */
@@ -153,59 +153,160 @@ p, ul, ol {
 
     }
 
-/**
+
+
+
+
+    /**
   * 2. Navigation
   */
   .site-nav {
-    position: sticky;
-    top: 0;
-    box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
+    text-align: start;
   }
-.site-footer ul,
-.site-nav ul,
-.site-footer-start ul {
+
+  .site-nav,
+  .site-footer { 
+    color: white; 
+  
+    box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+  }
+  
+  /* Navigationsliste als Flex-Container */
+  .site-footer ul,
+  .site-nav ul,
+  .site-footer-start ul { 
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-flow: column; 
+    list-style: none;  
+    
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  /* Die Listenelemente li benötigen in der mobilen Navigation kein CSS ;-) */
+  
+  /* Navigationslinks gestalten */
+  .site-nav a,
+  .site-footer a,
+  .site-footer-start a {
+    display: block;
 
-    list-style: none;
+    color: white; 
+    text-decoration: none; 
+    padding: 0.5rem 1rem; 
+  }
+  
+  /* Hover und Focus gestalten */
+  .site-nav a:hover, 
+  .site-nav a:focus,
+  .site-footer a:hover, 
+  .site-footer a:focus,
+  .site-footer-start a:hover,
+  .site-footer-start a:focus { 
+      color:sandybrown;
+  }
+  
+  /* Aktuellen Menüpunkt hervorheben */
+  .site-nav .current,
+  .site-footer .current,
+  .site-footer-start current {
+      font-weight: bold;
+      font-size:x-large;
+  }
 
-    padding: 0;
-    margin: 0;
-    align-items: center;
-}
-.site-footer li,
-.site-nav li,
-.site-footer-start li {
-    flex: 1;
-    margin: 2rem;
-}
-.site-nav a,
-.site-footer a,
-.site-footer-start a {
-    display: flex;
+  
+/* Menübutton per CSS gestalten */
 
-    color: white;
-    text-decoration: none;
+/* Kein JavaScript? Menübutton ausblenden */
+.no-js .menubutton { display: none; }
+
+/* Menübutton gestalten */
+.js .menubutton {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  background: inherit;
+  color: white; 
+  font: inherit; 
+  text-align: center; 
+  padding: 0.5rem 1rem; 
+  border: 0; 
+  margin: 0; 
 }
-.site-nav .current,
-.site-footer .current,
-.site-footer-start current {
-    font-weight: bold;
-    font-size:x-large;
+
+.js .menubutton::before {
+
+  content: url("../pictures/menuburger.svg");
+  width: 2rem; 
+  height: 2rem; 
+  margin: 0.25rem; 
 }
-/* Mauseffekt beim darüberfahren */ 
-.site-nav a:hover, 
-.site-nav a:focus,
-.site-footer a:hover, 
-.site-footer a:focus,
-.site-footer-start a:hover,
-.site-footer-start a:focus { 
-    color:sandybrown;
+/* Menübutton per CSS ausblenden */
+
+  .js .site-nav ul {
+    max-height: 0; 
+    overflow: hidden; 
+  }
+
+/* Navigationsliste mit dem Menübutton einblenden */
+
+/* Navigationsliste mit leichter Animation einblenden  */
+.js .showmenu + ul {
+  max-height: 100rem; 
+  transition: max-height 0.5s ease-in-out;
+  overflow: auto; 
 }
+
+/* Tausche Hamburger gegen X */
+.js .menubutton.showmenu::before {
+  content: url("../pictures/menuclose.svg");
+}
+
+    /* Umrechnung 768 Pixel / 16px = 48remm*/
+    @media screen and (min-width: 48rem) {
+
+      .menubutton { display: none !important; }
+
+      .site-nav {
+        position: sticky;
+        top: 0;
+        box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+      }
+    
+      .site-nav .inside {
+        padding: 0 1rem; 
+      }
+    
+      .site-footer ul,
+      .site-nav ul,
+      .site-footer-start ul { 
+        max-height: none !important;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+    
+      .site-footer li,
+      .site-nav li,
+      .site-footer-start li {
+        flex: 1; 
+        margin: 2rem;
+      }
+
+    }
+    /* Umrechnung 1024 Pixel / 16px = 64remm*/
+    @media screen and (min-width: 64rem) {
+
+
+
+    }
+
+
 
 /**
   * 3. Startseite
