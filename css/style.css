@@ -12,112 +12,128 @@
 /**
   * 1. Basiseinstellungen
   */
-  @media print {
+@media print {
 
-    * { box-shadow: none !important; text-shadow: none !important; }
-
-    html {
-        background: white; 
-        color: black; 
-    }
-
-    .site-nav, 
-    .site-footer {
-        display: none;
-    }
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
   }
-  
-  .titel > a {
-    display: flex;
 
-    align-items: center;
-  }
   html {
-    scroll-behavior: smooth;
-    background-color: transparent; 
-    height:100vh;
-  }
-body {
-    display: flex;
-
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    font-weight: 500;
-    font-style: normal;
-    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
-    text-align: left;
-    /* hyphens: auto; */
-
-    background-color:floralwhite;
+    background: white;
     color: black;
-
-    max-width: none;
-    min-height: 100vh;
-    flex-direction: column;
-    padding: 0;
-    margin:0;
-    flex-flow: column; 
-
-
-    /* Bereiche anzeigen */
-    /* * { outline: 1px solid red; } */
-}
-  /* Layoutbereiche in der Breite begrenzen und zentrieren */
-  .inside {
-    padding: 0 1rem; 
-    margin: 0 auto; 
   }
+
+  .site-nav,
+  .site-footer {
+    display: none;
+  }
+}
+
+.titel>a {
+  display: flex;
+
+  align-items: center;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: transparent;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  font-style: normal;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  /* hyphens: auto; */
+
+  background-color: floralwhite;
+  color: black;
+
+  max-width: none;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  flex-flow: column;
+
+
+  /* Bereiche anzeigen */
+  /* * { outline: 1px solid red; } */
+}
+
+/* Layoutbereiche in der Breite begrenzen und zentrieren */
+.inside {
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
 main {
-    padding: 1rem;
-    flex: 1
+  padding: 1rem;
+  flex: 1
 }
+
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+
 h1 {
-    padding: 1rem;
+  padding: 1rem;
 }
-.site-header > * {
+
+.site-header>* {
   flex-grow: 1;
   flex-shrink: 1;
 }
+
 .site-nav,
 .site-footer,
 .site-footer-start {
-  background-color:teal;
+  background-color: teal;
   color: white;
   padding: 1rem;
   text-align: center;
 }
+
 .site-header {
-    display:flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    text-align: start;
-    padding-left: 4rem;
+  text-align: start;
+  padding-left: 4rem;
 
-    background-color:teal;
-    color: white;
+  background-color: teal;
+  color: white;
 
-    padding-top: 1rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
+
 .logo {
   display: flex;
   padding: 1rem;
 
   align-items: end;
 }
+
 .site-header h1 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
+
 .rasenpflege img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
+
 .site-footer {
   margin-bottom: auto;
 }
@@ -133,94 +149,104 @@ h1 {
 
 
 /* Collapsing margins vermeiden */
-h1, h2, h3, h4, h5, h6, 
-p, ul, ol {
-    margin-top: 0; 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
 }
 
-    /* Umrechnung 768 Pixel / 16px = 48remm*/
-    @media screen and (min-width: 48rem) {
+/* Umrechnung 768 Pixel / 16px = 48remm*/
+@media screen and (min-width: 48rem) {
 
-      body {
-        font-size: 1.125rem;
-      }
+  body {
+    font-size: 1.125rem;
+  }
 
-    }
-    /* Umrechnung 1024 Pixel / 16px = 64remm*/
-    @media screen and (min-width: 64rem) {
+}
 
-      body {
-        font-size: 1.25rem;
-      }
+/* Umrechnung 1024 Pixel / 16px = 64remm*/
+@media screen and (min-width: 64rem) {
 
-    }
+  body {
+    font-size: 1.25rem;
+  }
 
-
-
+}
 
 
-    /**
+
+
+
+/**
   * 2. Navigation
   */
-  .site-nav {
-    text-align: start;
-  }
+.site-nav {
+  text-align: start;
+}
 
-  .site-nav,
-  .site-footer { 
-    color: white; 
-  
-    box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
-  }
-  
-  /* Navigationsliste als Flex-Container */
-  .site-footer ul,
-  .site-nav ul,
-  .site-footer-start ul { 
-    display: flex;
-    flex-flow: column; 
-    list-style: none;  
-    
-    padding: 0; 
-    margin: 0; 
-  }
-  
-  /* Die Listenelemente li benötigen in der mobilen Navigation kein CSS ;-) */
-  
-  /* Navigationslinks gestalten */
-  .site-nav a,
-  .site-footer a,
-  .site-footer-start a {
-    display: block;
+.site-nav,
+.site-footer {
+  color: white;
 
-    color: white; 
-    text-decoration: none; 
-    padding: 0.5rem 1rem; 
-  }
-  
-  /* Hover und Focus gestalten */
-  .site-nav a:hover, 
-  .site-nav a:focus,
-  .site-footer a:hover, 
-  .site-footer a:focus,
-  .site-footer-start a:hover,
-  .site-footer-start a:focus { 
-      color:sandybrown;
-  }
-  
-  /* Aktuellen Menüpunkt hervorheben */
-  .site-nav .current,
-  .site-footer .current,
-  .site-footer-start current {
-      font-weight: bold;
-      font-size:x-large;
-  }
+  box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+}
 
-  
+/* Navigationsliste als Flex-Container */
+.site-footer ul,
+.site-nav ul,
+.site-footer-start ul {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+/* Die Listenelemente li benötigen in der mobilen Navigation kein CSS ;-) */
+
+/* Navigationslinks gestalten */
+.site-nav a,
+.site-footer a,
+.site-footer-start a {
+  display: block;
+
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Hover und Focus gestalten */
+.site-nav a:hover,
+.site-nav a:focus,
+.site-footer a:hover,
+.site-footer a:focus,
+.site-footer-start a:hover,
+.site-footer-start a:focus {
+  color: sandybrown;
+}
+
+/* Aktuellen Menüpunkt hervorheben */
+.site-nav .current,
+.site-footer .current,
+.site-footer-start current {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+
 /* Menübutton per CSS gestalten */
 
 /* Kein JavaScript? Menübutton ausblenden */
-.no-js .menubutton { display: none; }
+.no-js .menubutton {
+  display: none;
+}
 
 /* Menübutton gestalten */
 .js .menubutton {
@@ -229,35 +255,36 @@ p, ul, ol {
 
   cursor: pointer;
   background: inherit;
-  color: white; 
-  font: inherit; 
-  text-align: center; 
-  padding: 0.5rem 1rem; 
-  border: 0; 
-  margin: 0; 
+  color: white;
+  font: inherit;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin: 0;
 }
 
 .js .menubutton::before {
 
   content: url("../pictures/menuburger.svg");
-  width: 2rem; 
-  height: 2rem; 
-  margin: 0.25rem; 
+  width: 2rem;
+  height: 2rem;
+  margin: 0.25rem;
 }
+
 /* Menübutton per CSS ausblenden */
 
-  .js .site-nav ul {
-    max-height: 0; 
-    overflow: hidden; 
-  }
+.js .site-nav ul {
+  max-height: 0;
+  overflow: hidden;
+}
 
 /* Navigationsliste mit dem Menübutton einblenden */
 
 /* Navigationsliste mit leichter Animation einblenden  */
-.js .showmenu + ul {
-  max-height: 100rem; 
+.js .showmenu+ul {
+  max-height: 100rem;
   transition: max-height 0.5s ease-in-out;
-  overflow: auto; 
+  overflow: auto;
 }
 
 /* Tausche Hamburger gegen X */
@@ -265,48 +292,47 @@ p, ul, ol {
   content: url("../pictures/menuclose.svg");
 }
 
-    /* Umrechnung 768 Pixel / 16px = 48remm*/
-    @media screen and (min-width: 48rem) {
+/* Umrechnung 768 Pixel / 16px = 48remm*/
+@media screen and (min-width: 48rem) {
 
-      .menubutton { display: none !important; }
+  .menubutton {
+    display: none !important;
+  }
 
-      .site-nav {
-        position: sticky;
-        top: 0;
-        box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-      }
-    
-      .site-nav .inside {
-        padding: 0 1rem; 
-      }
-    
-      .site-footer ul,
-      .site-nav ul,
-      .site-footer-start ul { 
-        max-height: none !important;
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-        margin: 0;
-      }
-    
-      .site-footer li,
-      .site-nav li,
-      .site-footer-start li {
-        flex: 1; 
-        margin: 2rem;
-      }
+  .site-nav {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
 
-    }
-    /* Umrechnung 1024 Pixel / 16px = 64remm*/
-    @media screen and (min-width: 64rem) {
+  .site-nav .inside {
+    padding: 0 1rem;
+  }
 
+  .site-footer ul,
+  .site-nav ul,
+  .site-footer-start ul {
+    max-height: none !important;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+  }
 
+  .site-footer li,
+  .site-nav li,
+  .site-footer-start li {
+    flex: 1;
+    margin: 2rem;
+  }
 
-    }
+}
+
+/* Umrechnung 1024 Pixel / 16px = 64remm*/
+@media screen and (min-width: 64rem) {}
 
 
 
@@ -315,128 +341,214 @@ p, ul, ol {
   */
   .site-body-start {
     padding-bottom: 0;
-}
-.startbild {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  /* position: relative; 
-  bottom: 5rem; */
+  }
+  
+  .startbild {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+  
+  .gallerie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2;
+  }
+  
+  .article-start {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text-content {
+    order: 1;
+  }
+  
+  .gallerie figure {
+    margin: 0;
+  }
+  
+  .gallerie-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .button-links,
+  .button-rechts {
+    margin: 0 0.5rem;
+  }
+
+
+/* Umrechnung 768 Pixel / 16px = 48remm*/
+@media screen and (min-width: 48rem) {
+
+  .article-start {
+    /* display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem; */
+    flex-direction: row;
+  }
+  .gallerie {
+    order: 1;
+    flex: 1;
+  }
+  .text-content {
+    padding-left: 1rem;
+    order: 2;
+    flex: 3;
+  }
+  .button-links,
+  .button-rechts {
+    margin: 0 0.5rem;
+  }
 }
 
-/* .article-start {
-  position: relative;
-  bottom: 5rem;
-} */
+/* Umrechnung 1024 Pixel / 16px = 64remm*/
+@media screen and (min-width: 64rem) {
+
+  .gallerie figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content {
+    padding-left: 2rem;
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
 
 /**
   * 4. Kontaktseite
   */
-  /* Umrechnung 768 Pixel / 16px = 48remm*/
-  @media screen and (min-width: 48rem) {
-    
-    .site-kontakt-content {
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-      grid-gap: 1rem;
-    }
-    .contact {
-      display: flex;
-      flex-direction:row;
-      align-items: baseline;
-      align-items: center;
-    }
-    .contact img {
-      vertical-align: middle;
-      margin-right: 2rem;
-      margin-top: 1.5rem;
-    }
-    .contact::before {
-      margin-top: 2rem;
-    }
-    .contact span {
-      vertical-align: middle;
-      padding-top: 1rem;
-    }
- 
+/* Umrechnung 768 Pixel / 16px = 48remm*/
+@media screen and (min-width: 48rem) {
+
+  .site-kontakt-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
   }
-    /* Umrechnung 1024 Pixel / 16px = 64remm*/
-    @media screen and (min-width: 64rem) {
 
-
-
-    }
-
-  .site-kontakt,
-  .site-kontakt-adresse {
-    margin: 1rem;
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-items: center;
   }
+
+  .contact img {
+    vertical-align: middle;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact::before {
+    margin-top: 2rem;
+  }
+
+  .contact span {
+    vertical-align: middle;
+    padding-top: 1rem;
+  }
+
+}
+
+/* Umrechnung 1024 Pixel / 16px = 64remm*/
+@media screen and (min-width: 64rem) {}
+
+.site-kontakt,
+.site-kontakt-adresse {
+  margin: 1rem;
+}
+
 .site-kontakt label {
-    display: block;
+  display: block;
 }
+
 .site-kontakt form div {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
-.contact{
+
+.contact {
   display: flex;
   align-items: center;
 }
+
 .contact img {
   vertical-align: middle;
   margin-right: 1rem;
   margin-top: 1.5rem;
 }
+
 .contact::before {
   margin-top: 2rem;
 }
+
 .contact span {
   vertical-align: middle;
   padding-top: 1rem;
 }
 
 /* Eingabefelder gestalten */
-.site-kontakt input[type="text"], 
+.site-kontakt input[type="text"],
 .site-kontakt input[type="email"],
-.site-kontakt input[type="betreff"],  
+.site-kontakt input[type="betreff"],
 .site-kontakt textarea {
-    font-size: inherit;
-    font-family: inherit;
+  font-size: inherit;
+  font-family: inherit;
 
-    width: 16rem;
-    padding: 0.5rem;
-    
-    border: 1px solid dimgrey;
-    border-radius: 0.25rem;
+  width: 16rem;
+  padding: 0.5rem;
+
+  border: 1px solid dimgrey;
+  border-radius: 0.25rem;
 }
-.site-kontakt input[type="text"]:focus, 
+
+.site-kontakt input[type="text"]:focus,
 .site-kontakt input[type="email"]:focus,
-.site-kontakt input[type="betreff"]:focus, 
+.site-kontakt input[type="betreff"]:focus,
 .site-kontakt textarea:focus {
-    background-color: white;
+  background-color: white;
 }
-/* Textarea - Breite begrenzen */ 
+
+/* Textarea - Breite begrenzen */
 .site-kontakt textarea {
-    max-width: 25rem; 
-    min-height: 8rem;
+  max-width: 25rem;
+  min-height: 8rem;
 }
+
 .site-kontakt button {
-    font-size: inherit; 
-    font-family: inherit; 
-    text-align: center;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
 
-    background-color:teal;
-    color: white; 
+  background-color: teal;
+  color: white;
 
-    width: 17rem;
-    padding: 1rem;
-    border: none;
-    border-radius: 0.25rem;
+  width: 17rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
 
-    cursor: pointer;
+  cursor: pointer;
 }
- .site-kontakt button:hover,
- .site-kontakt button:focus {
-    background-color: sandybrown;
+
+.site-kontakt button:hover,
+.site-kontakt button:focus {
+  background-color: sandybrown;
 }
 
 
@@ -444,6 +556,12 @@ p, ul, ol {
   * 5. Nützliche, allgemeine Klassen
   */
 
-  /* Klassen zum Floaten und Clearen */
-  .float-links { float: left; margin: 0 2rem 2rem 0; }
-  .float-stoppen { clear: both; }
+/* Klassen zum Floaten und Clearen */
+.float-links {
+  float: left;
+  margin: 0 2rem 2rem 0;
+}
+
+.float-stoppen {
+  clear: both;
+}
