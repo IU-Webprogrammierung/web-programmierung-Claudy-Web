@@ -52,40 +52,63 @@ function showDivs(n, gallerieId) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  let galleries = document.querySelectorAll(".gallerie");
+  initGalleries();
+});
+
+const galleryIndices = {}; // Speichert die aktuellen Indizes für jede Galerie separat
+
+function initGalleries() {
+  const galleries = document.querySelectorAll(".gallerie");
 
   galleries.forEach(gallery => {
-      let figures = gallery.querySelectorAll("figure");
+      const galleryId = gallery.id;
+      const figures = gallery.querySelectorAll("figure");
 
-      // Alle Bilder und figcaption verstecken außer dem ersten
+      // Sicherstellen, dass der Index für jede Galerie existiert
+      galleryIndices[galleryId] = 0;
+
       figures.forEach((figure, index) => {
-          if (index !== 0) {
-              figure.style.display = "none";
-          }
+          figure.style.display = index === 0 ? "block" : "none";
       });
+  });
+}
 
-      // Funktion für den Bildwechsel
-      let currentIndex = 0;
-      let totalFigures = figures.length;
+function plusDivs(n, galleryId) {
+  let gallery = document.getElementById(galleryId);
+  let figures = gallery.querySelectorAll("figure");
 
-      function showImage(index) {
-          figures.forEach((figure, i) => {
-              figure.style.display = i === index ? "block" : "none";
-          });
-      }
+  let currentIndex = galleryIndices[galleryId];
 
-      // Buttons für die Galerie-Steuerung
-      let prevButton = gallery.querySelector(".button-links");
-      let nextButton = gallery.querySelector(".button-rechts");
+  // Berechnung des neuen Index
+  let newIndex = (currentIndex + n + figures.length) % figures.length;
 
-      prevButton.addEventListener("click", function () {
-          currentIndex = (currentIndex - 1 + totalFigures) % totalFigures;
-          showImage(currentIndex);
-      });
+  // Aktuelles Bild ausblenden
+  figures[currentIndex].style.display = "none";
 
-      nextButton.addEventListener("click", function () {
-          currentIndex = (currentIndex + 1) % totalFigures;
-          showImage(currentIndex);
-      });
+  // Neues Bild anzeigen
+  figures[newIndex].style.display = "block";
+
+  // Index aktualisieren
+  galleryIndices[galleryId] = newIndex;
+}
+
+function resetGallery(galleryId) {
+  let gallery = document.getElementById(galleryId);
+  let figures = gallery.querySelectorAll("figure");
+
+  // Setzt die Galerie wieder auf das erste Bild
+  figures.forEach((figure, index) => {
+      figure.style.display = index === 0 ? "block" : "none";
+  });
+
+  // Index zurücksetzen
+  galleryIndices[galleryId] = 0;
+}
+
+// Falls die Tabs (Gartenpflege, Objektbetreuung) durch Buttons gesteuert werden:
+document.querySelectorAll(".tab-button").forEach(button => {
+  button.addEventListener("click", function () {
+      const targetGallery = this.getAttribute("data-target"); // Annahme: Button hat data-target mit der ID der Galerie
+      resetGallery(targetGallery);
   });
 });
