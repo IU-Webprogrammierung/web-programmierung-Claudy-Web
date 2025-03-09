@@ -82,10 +82,17 @@ main {
 
 img {
   height: auto;
+  max-width: 100%;
 }
 
 h1 {
-  padding: 1rem;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+}
+
+h2 {
+  padding-top: 2.5rem;
+  text-align: center;
 }
 
 .site-header>* {
@@ -104,17 +111,13 @@ h1 {
 
 .site-header {
   display: flex;
-  flex-wrap: wrap;
+
 
   text-align: start;
-  padding-left: 4rem;
-
   background-color: teal;
   color: white;
+  padding: 2rem 3.5rem;
 
-  padding-top: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
 }
 
 .logo {
@@ -137,6 +140,7 @@ h1 {
   margin-bottom: auto;
 }
 
+
 /* Bildergallerie */
 .button-links,
 .button-rechts {
@@ -156,17 +160,58 @@ h1 {
 
 .button-links:hover,
 .button-rechts:hover {
-  background-color: sandybrown; 
+  background-color: sandybrown;
 }
+
+.gallerie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+}
+
+.gallerie figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
+.gallerie figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.gallerie figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.gallerie-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.button-links,
+.button-rechts {
+  margin: 0 0.5rem;
+}
+
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  max-width: none;
 }
 
-
-
-
-
+.logo img {
+  width: 2.5rem;
+}
 
 
 /* Collapsing margins vermeiden */
@@ -189,6 +234,39 @@ ol {
     font-size: 1.125rem;
   }
 
+  h1 {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .logo img {
+    width: 4rem;
+  }
+
+  .gallerie {
+    order: 1;
+    flex: 1;
+  }
+
+  .text-content {
+    padding-left: 1rem;
+    order: 2;
+    flex: 3;
+  }
+
+  .button-links,
+  .button-rechts {
+    margin: 0 0.5rem;
+  }
+
+  .button-links:hover,
+  .button-rechts:hover {
+    background-color: sandybrown;
+  }
+
+  .icon img {
+    width: 1.5rem;
+  }
 }
 
 /* Umrechnung 1024 Pixel / 16px = 64remm*/
@@ -196,6 +274,11 @@ ol {
 
   body {
     font-size: 1.25rem;
+  }
+
+  .gallerie figure img {
+    width: 100%;
+    height: auto;
   }
 
 }
@@ -357,83 +440,52 @@ ol {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /**
   * 3. Startseite
   */
-  .site-body-start {
-    padding-bottom: 0;
-  }
-  
-  .startbild {
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
-  }
-  
-  .gallerie {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    order: 2;
-  }
-  
-  .article-start {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .text-content {
-    order: 1;
-  }
-  
-  .gallerie figure {
-    margin: 0;
-  }
-  
-  .gallerie-buttons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  
-  .button-links,
-  .button-rechts {
-    margin: 0 0.5rem;
-  }
+.site-body-start {
+  padding-bottom: 0;
+}
+
+.startbild {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content {
+  order: 1;
+}
+
+
 
 
 /* Umrechnung 768 Pixel / 16px = 48remm*/
 @media screen and (min-width: 48rem) {
 
-  .article-start {
-    /* display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 1rem; */
+  .article {
     flex-direction: row;
   }
-  .gallerie {
-    order: 1;
-    flex: 1;
-  }
-  .text-content {
-    padding-left: 1rem;
-    order: 2;
-    flex: 3;
-  }
-  .button-links,
-  .button-rechts {
-    margin: 0 0.5rem;
-  }
+
 }
 
 /* Umrechnung 1024 Pixel / 16px = 64remm*/
 @media screen and (min-width: 64rem) {
-
-  .gallerie figure img {
-    width: 100%;
-    height: auto;
-  }
 
   .text-content {
     padding-left: 2rem;
@@ -441,12 +493,6 @@ ol {
 
 
 }
-
-
-
-
-
-
 
 
 
@@ -571,6 +617,12 @@ ol {
 .site-kontakt button:focus {
   background-color: sandybrown;
 }
+
+
+
+
+
+
 
 
 /**  

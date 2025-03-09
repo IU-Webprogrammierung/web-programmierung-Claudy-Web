@@ -29,18 +29,18 @@
 
     <!-- Die Verbindung zum Stylesheet & Javascript-->
     <link href="css/style.css" rel="stylesheet">
-    <script src="script/gallerie.js" async></script>
-    <script src="script/javascript.js" async></script>
+    <script src="script/gallerie.js" defer></script>
+    <script src="script/javascript.js" defer></script>
 
 </head>
 
 <body class="site-body-start">
     <header class="site-header">
-        <h1 class="titel">Hausmeisterdienste</h1>
-        <div class="logo">
-            <img src="pictures/LogoWeißTransparent.svg"
-            alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon.">
-        </div>
+            <h1 class="titel">Hausmeisterdienste</h1>
+            <div class="logo">
+                <img src="pictures/LogoWeißTransparent.svg"
+                alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon.">
+            </div>
     </header>
     <nav class="site-nav">
         <div class="inside">
@@ -62,8 +62,8 @@
             </div>
 
 
-            <article class="article-start">
-                <div class="gallerie">
+            <article class="article">
+                <div id="start" class="gallerie">
                     <figure>
                         <img class="gallerie-bilder" src="pictures/Rasenpflege210x140.jpg" alt="Gartenwerkzeuge auf Rasen."
                             srcset="pictures/Rasenpflege420x280.jpg 2x"
@@ -84,11 +84,11 @@
                         <figcaption>Traktor mit Schneepflug im Einsatz für den Winterdienst</figcaption>
                     </figure>
                     <div class="gallerie-buttons">
-                        <button class="button-links" onclick="plusDivs(-1)">
-                            <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"><img>
+                        <button class="button-links" onclick="plusDivs(-1, 'start')">
+                            <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
                         </button>
-                        <button class="button-rechts" onclick="plusDivs(1)">
-                            <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"><img>
+                        <button class="button-rechts" onclick="plusDivs(1, 'start')">
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"></img>
                         </button>
                     </div>
                 </div>

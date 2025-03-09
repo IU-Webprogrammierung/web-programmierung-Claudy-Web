@@ -30,7 +30,8 @@
 
     <!-- Die Verbindung zum Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="script/javascript.js" async></script>
+    <script src="script/gallerie.js" defer></script>
+    <script src="script/javascript.js" defer></script>
 </head>
 
 <body>
@@ -54,46 +55,85 @@
     </nav>
     <main class="site-content" id="content">
         <div class="inside">
-            <figure class="float-links">
-                <h2>Winterdienst</h2>
-                    <img class="bilder-content" src="pictures/Schneefräse420x280.jpg" alt="Schneefräse im Einsatz"
-                        srcset="pictures/Schneefräse840x560.jpg 2x">
-                    <img class="bilder-content" src="pictures/Schnee-schaufeln420x280.jpg" alt="Person schaufelt Schnee"
-                        srcset="pictures/Schnee-schaufeln840x560.jpg 2x">
-                    <img class="bilder-content" src="pictures/Schneeschippe420x280.jpg" alt="Schneeschippe im Vordergrund,
-                        Hintergrund verschwommene Berge." srcset="pictures/Schneeschippe840x560.jpg 2x">
-            </figure>
-                <section>
-                    <p>
-                        Unser Winterdienst sorgt für Ihre Sicherheit und die uneingeschränkte Nutzbarkeit Ihrer
-                        Verkehrsflächen während der kalten Jahreszeit. Mit unserem zuverlässigen und professionellen Service
-                        gewährleisten wir eine zeitnahe und gründliche Schneeräumung sowie das Streuen von Gehwegen,
-                        Einfahrten, Parkplätzen und anderen betroffenen Flächen.
-                    </p>
-                    <p>
-                        Unser Team ist rund um die Uhr einsatzbereit, um schnell auf winterliche Witterungsbedingungen zu
-                        reagieren. Dank kontinuierlicher Wetterüberwachung sind wir in der Lage, präventive Maßnahmen zu
-                        ergreifen und gefährliche Glättebildung frühzeitig zu verhindern. Hierbei setzen wir auf modernste
-                        Räumgeräte und umweltfreundliche Streumittel, um eine effektive und nachhaltige Lösung anzubieten.
-                    </p>
-                    <p>
-                        Zusätzlich bieten wir individuelle Betreuung und maßgeschneiderte Lösungen für private, gewerbliche
-                        und öffentliche Flächen an. Mit unserem umfassenden Service können Sie sicher sein, dass Ihre
-                        Immobilie auch bei Schnee und Eis jederzeit begehbar und sicher bleibt – ganz ohne Stress und
-                        Aufwand für Sie.
-                    </p>
-                </section>
-
-            <figure class="float-links">
-                <h2>Gartenpflege</h2>
-                    <img class="bilder-content" src="pictures/Rasen-mähen420x280.jpg"
-                        alt="Frau mäht Rasen mit Sitzrasenmäher" srcset="pictures/Rasen-mähen840x560.jpg 2x">
-                    <img class="bilder-content" src="pictures/Rasenmäher420x280.jpg" alt="Rasenmäher auf Rasen"
-                        srcset="pictures/Rasenmäher840x560.jpg 2x">
-                    <img class="bilder-content" src="pictures/Rasenmäher-vorne420x280.jpg"
-                        alt="Vorderansicht eines Rasenmähers" srcset="pictures/Rasenmäher-vorne840x560.jpg 2x">
-                </figure>
-                <section>
+            <h2>Winterdienst</h2>
+            <article class="article">
+                <div  id="winter" class="gallerie">
+                        <figure>
+                            <img class="gallerie-bilder-winter" src="pictures/Schneefräse420x280.jpg" alt="Schneefräse im Einsatz"
+                                srcset="pictures/Schneefräse840x560.jpg 2x" data-caption="Schneefräse im Einsatz">
+                                <figcaption>Schneefräse im Einsatz</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="gallerie-bilder-winter" src="pictures/Schnee-schaufeln420x280.jpg" alt="Person schaufelt Schnee"
+                                srcset="pictures/Schnee-schaufeln840x560.jpg 2x" data-caption="Person schaufelt Schnee">
+                            <figcaption>Person schaufelt Schnee</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="gallerie-bilder-winter" src="pictures/Schneeschippe420x280.jpg" alt="Schneeschippe im Vordergrund,
+                                Hintergrund verschwommene Berge" srcset="pictures/Schneeschippe840x560.jpg 2x"
+                                data-caption="Schneeschippe im Vordergrund, Hintergrund verschwommene Berge">
+                                <figcaption>Schneeschippe im Vordergrund, Hintergrund verschwommene Berge</figcaption>
+                        </figure>
+                        <div class="gallerie-buttons">
+                            <button class="button-links" onclick="plusDivs(-1, 'winter')">
+                                <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"><img>
+                            </button>
+                            <button class="button-rechts" onclick="plusDivs(1, 'winter')">
+                                <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"><img>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p>
+                            Unser Winterdienst sorgt für Ihre Sicherheit und die uneingeschränkte Nutzbarkeit Ihrer
+                            Verkehrsflächen während der kalten Jahreszeit. Mit unserem zuverlässigen und professionellen Service
+                            gewährleisten wir eine zeitnahe und gründliche Schneeräumung sowie das Streuen von Gehwegen,
+                            Einfahrten, Parkplätzen und anderen betroffenen Flächen.
+                        </p>
+                        <p>
+                            Unser Team ist rund um die Uhr einsatzbereit, um schnell auf winterliche Witterungsbedingungen zu
+                            reagieren. Dank kontinuierlicher Wetterüberwachung sind wir in der Lage, präventive Maßnahmen zu
+                            ergreifen und gefährliche Glättebildung frühzeitig zu verhindern. Hierbei setzen wir auf modernste
+                            Räumgeräte und umweltfreundliche Streumittel, um eine effektive und nachhaltige Lösung anzubieten.
+                        </p>
+                        <p>
+                            Zusätzlich bieten wir individuelle Betreuung und maßgeschneiderte Lösungen für private, gewerbliche
+                            und öffentliche Flächen an. Mit unserem umfassenden Service können Sie sicher sein, dass Ihre
+                            Immobilie auch bei Schnee und Eis jederzeit begehbar und sicher bleibt – ganz ohne Stress und
+                            Aufwand für Sie.
+                        </p>
+                    </div>
+            </article>
+            <h2>Gartenpflege</h2>
+            <article class="article">
+                <div id="garten" class="gallerie">
+                    <figure>
+                        <img class="gallerie-bilder-garten" src="pictures/Rasen-mähen420x280.jpg"
+                            alt="Frau mäht Rasen mit Sitzrasenmäher" srcset="pictures/Rasen-mähen840x560.jpg 2x"
+                            data-caption="Frau mäht Rasen mit Sitzrasenmäher"></img>
+                        <figcaption>Frau mäht Rasen mit Sitzrasenmäher</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-garten" src="pictures/Rasenmäher420x280.jpg" alt="Rasenmäher auf Rasen"
+                            srcset="pictures/Rasenmäher840x560.jpg 2x" data-caption="Rasenmäher auf Rasen"></img>
+                            <figcaption>Rasenmäher auf Rasen</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-garten" src="pictures/Rasenmäher-vorne420x280.jpg"
+                            alt="Vorderansicht eines Rasenmähers" srcset="pictures/Rasenmäher-vorne840x560.jpg 2x"
+                            data-caption="Vorderansicht eines Rasenmähers"></img>
+                            <figcaption>Vorderansicht eines Rasenmähers</figcaption>
+                    </figure>
+                    <div class="gallerie-buttons">
+                        <button class="button-links" onclick="plusDivs(-1, 'garten')">
+                            <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
+                        </button>
+                        <button class="button-rechts" onclick="plusDivs(1, 'garten')">
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"></img>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-content">
                     <p>
                         Unsere Gartenpflege umfasst eine professionelle und ganzheitliche Betreuung Ihrer Grünflächen, um
                         Schönheit, Ordnung und Gesundheit Ihrer Außenanlagen zu bewahren. Wir bieten Ihnen ein breites
@@ -114,18 +154,38 @@
                         Unser Ziel ist es, Ihre Außenbereiche nicht nur gepflegt, sondern auch attraktiv und einladend zu
                         gestalten – ob für den privaten Rückzugsort oder als repräsentative Umgebung für Ihr Unternehmen.
                     </p>
-                </section>
+                </div>
             </article>
-            <figure class="float-links">
-                <h2>Objektbetreuung</h2>
-                    <img class="bilder-content" src="pictures/Objektbetreuung_lila420x280.jpg"
-                        alt="grün antrazit Gebäude mit Garten" srcset="pictures/Objektbetreuung_lila840x560.jpg 2x">
-                    <img class="bilder-content" src="pictures/Objektbetreuung-mit-Garten420x280.jpg"
-                        alt="Backsteingebäude mit Garten" srcset="pictures/Objektbetreuung-mit-Garten840x560.jpg 2x">
-                    <img class="bilder-content" src="pictures/Hecken-schneiden420x280.jpg" alt="Person schneidet Hecke"
-                        srcset="pictures/Hecken-schneiden840x560.jpg 2x">
-                </figure>
-                <section>
+            <h2>Objektbetreuung</h2>
+            <article class="article">
+                <div id="objekt" class="gallerie">
+                    <figure>
+                        <img class="gallerie-bilder-objekt" src="pictures/Objektbetreuung_lila420x280.jpg"
+                            alt="grün antrazit Gebäude mit Garten" srcset="pictures/Objektbetreuung_lila840x560.jpg 2x"
+                            data-caption="grün antrazit Gebäude mit Garten"></img>
+                        <figcaption>grün antrazit Gebäude mit Garten</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-objekt" src="pictures/Objektbetreuung-mit-Garten420x280.jpg"
+                            alt="Backsteingebäude mit Garten" srcset="pictures/Objektbetreuung-mit-Garten840x560.jpg 2x"
+                            data-caption="Backsteingebäude mit Garten"></img>
+                            <figcaption>Backsteingebäude mit Garten</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-objekt" src="pictures/Hecken-schneiden420x280.jpg" alt="Person schneidet Hecke"
+                            srcset="pictures/Hecken-schneiden840x560.jpg 2x" data-caption="Person schneidet Hecke"></img>
+                            <figcaption>Gartenwerkzeuge auf Rasen</figcaption>
+                    </figure>
+                    <div class="gallerie-buttons">
+                        <button class="button-links" onclick="plusDivs(-1, 'objekt')">
+                            <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
+                        </button>
+                        <button class="button-rechts" onclick="plusDivs(1, 'objekt')">
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"></img>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-content">
                     <p>
                         Unsere Objektbetreuung bietet Ihnen eine umfassende und professionelle Instandhaltung Ihrer
                         Immobilien und Außenanlagen, um deren Wert, Sicherheit und Funktionalität langfristig zu erhalten.
@@ -148,7 +208,7 @@
                         Mit unserer professionellen Betreuung können Sie sich beruhigt auf Ihr Kerngeschäft oder Ihre
                         persönliche Nutzung konzentrieren – wir kümmern uns zuverlässig um den Rest.
                     </p>
-                </section>
+                </div>
             </article>
         </div>
     </main>
