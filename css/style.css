@@ -1,75 +1,60 @@
 /* ================================
-    Stylesheet für die Website
+   Stylesheet für die Website
 
-    Abschnitte im Stylesheet:
-    1. Basiseinstellungen
-    2. Navigation
-    3. Startseite
-    4. Kontaktseite
-    5. Nützliche, allgemeine Klassen
-*/
+   Struktur:
+   1. Allgemeine Einstellungen
+   2. Layout & Struktur
+   3. Navigation
+   4. Startseite
+   5. Kontaktseite
+   6. Bildergalerie
+   7. Allgemeine Klassen & Utilities
+   8. Media Queries
+   9. Media Print
+================================ */
 
-/**
-  * 1. Basiseinstellungen
-  */
-@media print {
-
-  * {
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  html {
-    background: white;
-    color: black;
-  }
-
-  .site-nav,
-  .site-footer {
-    display: none;
-  }
-}
-
-.titel>a {
-  display: flex;
-
-  align-items: center;
-}
-
+/* ================================
+   1. Allgemeine Einstellungen
+================================ */
 html {
   scroll-behavior: smooth;
   background-color: transparent;
   height: 100vh;
 }
 
+.titel>a {
+  display: flex;
+  align-items: center;
+}
+
 body {
   display: flex;
-
+  flex-direction: column;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;
-  font-style: normal;
   text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
-  text-align: left;
-  /* hyphens: auto; */
-
   background-color: floralwhite;
   color: black;
-
-  max-width: none;
   min-height: 100vh;
-  flex-direction: column;
-  padding: 0;
   margin: 0;
-  flex-flow: column;
-
-
-  /* Bereiche anzeigen */
-  /* * { outline: 1px solid red; } */
+  padding: 0;
 }
 
-/* Layoutbereiche in der Breite begrenzen und zentrieren */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.icon {
+  width: 1.5rem;
+  max-width: none;
+}
+
+/* ================================
+   2. Layout & Struktur
+================================ */
 .inside {
   padding: 0 1rem;
   margin: 0 auto;
@@ -78,11 +63,6 @@ body {
 main {
   padding: 1rem;
   flex: 1
-}
-
-img {
-  height: auto;
-  max-width: 100%;
 }
 
 h1 {
@@ -95,232 +75,67 @@ h2 {
   text-align: center;
 }
 
-.site-header>* {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-.site-nav,
-.site-footer,
-.site-footer-start {
-  background-color: teal;
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-
 .site-header {
   display: flex;
-
-
-  text-align: start;
+  align-items: center;
   background-color: teal;
   color: white;
   padding: 2rem 3.5rem;
-
-}
-
-.logo {
-  display: flex;
-  padding: 1rem;
-
-  align-items: end;
 }
 
 .site-header h1 {
   margin-bottom: 0;
 }
 
-.rasenpflege img {
-  width: 100%;
-  height: auto;
-}
-
-.site-footer {
-  margin-bottom: auto;
-}
-
-
-/* Bildergallerie */
-.button-links,
-.button-rechts {
-  background-color: teal;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1rem;
-  margin: 0.25rem 0.125rem;
-  cursor: pointer;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3), 0 1px 10px rgb(51, 51, 51, 0.29);
-}
-
-.button-links:hover,
-.button-rechts:hover {
-  background-color: sandybrown;
-}
-
-.gallerie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  order: 2;
-}
-
-.gallerie figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  width: 100%;
-}
-
-.gallerie figure img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.gallerie figcaption {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
-.gallerie-buttons {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 0.5rem;
-}
-
-.button-links,
-.button-rechts {
-  margin: 0 0.5rem;
-}
-
-.icon {
-  width: 1.5rem;
-  max-width: none;
-}
-
-.logo img {
+.logo {
+  padding: 1rem;
+  padding-bottom: 0rem;
+  align-items: end;
   width: 2.5rem;
 }
-
 
 /* Collapsing margins vermeiden */
 h1,
 h2,
-h3,
-h4,
-h5,
-h6,
 p,
 ul,
 ol {
   margin-top: 0;
 }
 
-/* Umrechnung 768 Pixel / 16px = 48remm*/
-@media screen and (min-width: 48rem) {
-
-  body {
-    font-size: 1.125rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    padding: 1rem;
-  }
-
-  .logo img {
-    width: 4rem;
-  }
-
-  .gallerie {
-    order: 1;
-    flex: 1;
-  }
-
-  .text-content {
-    padding-left: 1rem;
-    order: 2;
-    flex: 3;
-  }
-
-  .button-links,
-  .button-rechts {
-    margin: 0 0.5rem;
-  }
-
-  .button-links:hover,
-  .button-rechts:hover {
-    background-color: sandybrown;
-  }
-
-  .icon img {
-    width: 1.5rem;
-  }
+/* ================================
+   3. Navigation
+================================ */
+.site-nav,
+.site-footer {
+  background-color: teal;
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(51, 51, 51, 0.3);
 }
 
-/* Umrechnung 1024 Pixel / 16px = 64remm*/
-@media screen and (min-width: 64rem) {
-
-  body {
-    font-size: 1.25rem;
-  }
-
-  .gallerie figure img {
-    width: 100%;
-    height: auto;
-  }
-
-}
-
-
-
-
-
-/**
-  * 2. Navigation
-  */
 .site-nav {
   text-align: start;
 }
 
-.site-nav,
 .site-footer {
-  color: white;
-
-  box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+  text-align: center;
 }
 
 /* Navigationsliste als Flex-Container */
 .site-footer ul,
-.site-nav ul,
-.site-footer-start ul {
+.site-nav ul {
   display: flex;
   flex-flow: column;
   list-style: none;
-
   padding: 0;
   margin: 0;
 }
 
-/* Die Listenelemente li benötigen in der mobilen Navigation kein CSS ;-) */
-
 /* Navigationslinks gestalten */
 .site-nav a,
-.site-footer a,
-.site-footer-start a {
+.site-footer a {
   display: block;
-
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -330,22 +145,16 @@ ol {
 .site-nav a:hover,
 .site-nav a:focus,
 .site-footer a:hover,
-.site-footer a:focus,
-.site-footer-start a:hover,
-.site-footer-start a:focus {
+.site-footer a:focus {
   color: sandybrown;
 }
 
 /* Aktuellen Menüpunkt hervorheben */
 .site-nav .current,
-.site-footer .current,
-.site-footer-start current {
+.site-footer .current {
   font-weight: bold;
   font-size: x-large;
 }
-
-
-/* Menübutton per CSS gestalten */
 
 /* Kein JavaScript? Menübutton ausblenden */
 .no-js .menubutton {
@@ -382,8 +191,6 @@ ol {
   overflow: hidden;
 }
 
-/* Navigationsliste mit dem Menübutton einblenden */
-
 /* Navigationsliste mit leichter Animation einblenden  */
 .js .showmenu+ul {
   max-height: 100rem;
@@ -396,8 +203,211 @@ ol {
   content: url("../pictures/menuclose.svg");
 }
 
+/* ================================
+   4. Startseite
+================================ */
+.site-body-start {
+  padding-bottom: 0;
+}
+
+.startbild {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-content {
+  order: 1;
+}
+
+/* ================================
+   5. Kontaktseite
+================================ */
+.site-kontakt label {
+  display: block;
+}
+
+.site-kontakt form div {
+  margin-bottom: 1rem;
+}
+
+.site-kontakt input[type="text"],
+.site-kontakt input[type="email"],
+.site-kontakt input[type="betreff"],
+.site-kontakt textarea {
+  font-size: inherit;
+  font-family: inherit;
+  width: 16rem;
+  padding: 0.5rem;
+  border: 1px solid dimgrey;
+  background-color: white;
+  border-radius: 0.25rem;
+}
+
+/* Nachricht - Breite begrenzen */
+.site-kontakt textarea {
+  max-width: 25rem;
+  min-height: 8rem;
+}
+
+.site-kontakt button {
+  font-size: inherit;
+  font-family: inherit;
+  background-color: teal;
+  color: white;
+  width: 17rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.site-kontakt button:hover,
+.site-kontakt button:focus {
+  background-color: sandybrown;
+}
+
+.site-kontakt,
+.site-kontakt-adresse {
+  margin: 1rem;
+}
+
+.kontakt {
+  display: flex;
+  align-items: center;
+}
+
+.kontakt img {
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+}
+
+.kontakt::before {
+  margin-top: 2rem;
+}
+
+.kontakt span {
+  padding-top: 1rem;
+}
+
+/* ================================
+   6. Bildergalerie
+================================ */
+.gallerie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+}
+
+.gallerie figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+
+.gallerie figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+.gallerie figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.gallerie-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.button-links,
+.button-rechts {
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3), 0 1px 10px rgb(51, 51, 51, 0.29);
+}
+
+.button-links:hover,
+.button-rechts:hover {
+  background-color: sandybrown;
+}
+
+/* ================================
+   7. Allgemeine Klassen & Utilities
+================================ */
+.float-links {
+  float: left;
+  margin: 0 2rem 2rem 0;
+}
+
+.float-stoppen {
+  clear: both;
+}
+
+/* ================================
+   8. Media Queries
+================================ */
 /* Umrechnung 768 Pixel / 16px = 48remm*/
 @media screen and (min-width: 48rem) {
+
+  body {
+    font-size: 1.125rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+  .logo {
+    padding-bottom: 1rem;
+    width: 4rem;
+  }
+
+  .gallerie {
+    order: 1;
+    flex: 1;
+  }
+
+  .text-content {
+    padding-left: 1rem;
+    order: 2;
+    flex: 3;
+  }
+
+  .button-links,
+  .button-rechts {
+    margin: 0 0.5rem;
+  }
+
+  .button-links:hover,
+  .button-rechts:hover {
+    background-color: sandybrown;
+  }
+
+  .icon img {
+    width: 1.5rem;
+  }
 
   .menubutton {
     display: none !important;
@@ -433,75 +443,9 @@ ol {
     margin: 2rem;
   }
 
-}
-
-/* Umrechnung 1024 Pixel / 16px = 64remm*/
-@media screen and (min-width: 64rem) {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
-  * 3. Startseite
-  */
-.site-body-start {
-  padding-bottom: 0;
-}
-
-.startbild {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-}
-
-.article {
-  display: flex;
-  flex-direction: column;
-}
-
-.text-content {
-  order: 1;
-}
-
-
-
-
-/* Umrechnung 768 Pixel / 16px = 48remm*/
-@media screen and (min-width: 48rem) {
-
   .article {
     flex-direction: row;
   }
-
-}
-
-/* Umrechnung 1024 Pixel / 16px = 64remm*/
-@media screen and (min-width: 64rem) {
-
-  .text-content {
-    padding-left: 2rem;
-  }
-
-
-}
-
-
-
-
-/**
-  * 4. Kontaktseite
-  */
-/* Umrechnung 768 Pixel / 16px = 48remm*/
-@media screen and (min-width: 48rem) {
 
   .site-kontakt-content {
     display: grid;
@@ -509,24 +453,24 @@ ol {
     grid-gap: 1rem;
   }
 
-  .contact {
+  .kontakt {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     align-items: center;
   }
 
-  .contact img {
+  .kontakt img {
     vertical-align: middle;
     margin-right: 2rem;
     margin-top: 1.5rem;
   }
 
-  .contact::before {
+  .kontakt::before {
     margin-top: 2rem;
   }
 
-  .contact span {
+  .kontakt span {
     vertical-align: middle;
     padding-top: 1rem;
   }
@@ -534,107 +478,40 @@ ol {
 }
 
 /* Umrechnung 1024 Pixel / 16px = 64remm*/
-@media screen and (min-width: 64rem) {}
+@media screen and (min-width: 64rem) {
 
-.site-kontakt,
-.site-kontakt-adresse {
-  margin: 1rem;
+  body {
+    font-size: 1.25rem;
+  }
+
+  .gallerie figure img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content {
+    padding-left: 2rem;
+  }
+
 }
 
-.site-kontakt label {
-  display: block;
-}
+/* ================================
+   9. Media Print
+================================ */
+@media print {
 
-.site-kontakt form div {
-  margin-bottom: 1rem;
-}
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-.contact {
-  display: flex;
-  align-items: center;
-}
+  html {
+    background: white;
+    color: black;
+  }
 
-.contact img {
-  vertical-align: middle;
-  margin-right: 1rem;
-  margin-top: 1.5rem;
-}
-
-.contact::before {
-  margin-top: 2rem;
-}
-
-.contact span {
-  vertical-align: middle;
-  padding-top: 1rem;
-}
-
-/* Eingabefelder gestalten */
-.site-kontakt input[type="text"],
-.site-kontakt input[type="email"],
-.site-kontakt input[type="betreff"],
-.site-kontakt textarea {
-  font-size: inherit;
-  font-family: inherit;
-
-  width: 16rem;
-  padding: 0.5rem;
-
-  border: 1px solid dimgrey;
-  border-radius: 0.25rem;
-}
-
-.site-kontakt input[type="text"]:focus,
-.site-kontakt input[type="email"]:focus,
-.site-kontakt input[type="betreff"]:focus,
-.site-kontakt textarea:focus {
-  background-color: white;
-}
-
-/* Textarea - Breite begrenzen */
-.site-kontakt textarea {
-  max-width: 25rem;
-  min-height: 8rem;
-}
-
-.site-kontakt button {
-  font-size: inherit;
-  font-family: inherit;
-  text-align: center;
-
-  background-color: teal;
-  color: white;
-
-  width: 17rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 0.25rem;
-
-  cursor: pointer;
-}
-
-.site-kontakt button:hover,
-.site-kontakt button:focus {
-  background-color: sandybrown;
-}
-
-
-
-
-
-
-
-
-/**  
-  * 5. Nützliche, allgemeine Klassen
-  */
-
-/* Klassen zum Floaten und Clearen */
-.float-links {
-  float: left;
-  margin: 0 2rem 2rem 0;
-}
-
-.float-stoppen {
-  clear: both;
+  .site-nav,
+  .site-footer {
+    display: none;
+  }
 }
