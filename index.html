@@ -27,20 +27,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Die Verbindung zum Stylesheet & Javascript-->
+    <!-- Die Verbindung zum Stylesheet & Javascripts-->
     <link href="css/style.css" rel="stylesheet">
     <script src="script/gallerie.js" defer></script>
     <script src="script/javascript.js" defer></script>
-
+    <script src="script/dark.js" defer></script>
 </head>
 
-<body class="site-body-start">
+<body class="site-body">
     <header class="site-header">
             <h1 class="titel">Hausmeisterdienste</h1>
             <div class="logo">
                 <img src="pictures/LogoWeißTransparent.svg"
                 alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon.">
             </div>
+
     </header>
     <nav class="site-nav">
         <div class="inside">
@@ -50,6 +51,11 @@
                 <li><a href="leistungen.html">Leistungen</a></li>
                 <li><a href="firma.html">Unsere Firma</a></li>
                 <li><a href="kontakt.html">Kontakt</a></li>
+                <li>
+                    <button class="toggle-button" onclick="toggleDarkMode()">
+                        <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>

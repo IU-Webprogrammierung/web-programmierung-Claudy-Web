@@ -11,12 +11,29 @@
    7. Allgemeine Klassen & Utilities
    8. Media Queries
    9. Media Print
+   10. Media Dark
 ================================ */
 
 /* ================================
    1. Allgemeine Einstellungen
 ================================ */
+
 html {
+  /* Farbvariablen*/
+  --color-base-dark: black;
+  --color-base-light: white;
+  --color-background-light: floralwhite;
+  --color-primary: teal;
+  --color-accent-active: sandybrown;
+  --color-shadow: rgba(0, 0, 0, 0.15);
+  --color-box-shadow: rgba(51, 51, 51, 0.3);
+  --color-box-shadow-smaler: rgb(51, 51, 51, 0.29);
+  --color-border: dimgrey;
+  --color-box-shadow-dark: rgb(151, 151, 151, 0.3);
+  --color-box-shadow-dark-smaler: rgb(151, 151, 151, 0.29);
+  --color-background-dark: #262626;
+  --color-background-dark-nav_header_footer: #222;
+
   scroll-behavior: smooth;
   background-color: transparent;
   height: 100vh;
@@ -34,9 +51,9 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: floralwhite;
-  color: black;
+  text-shadow: 2px 4px 4px var(--color-shadow);
+  background-color: var(--color-base-light);
+  color: var(--color-base-dark);
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -78,8 +95,8 @@ h2 {
 .site-header {
   display: flex;
   align-items: center;
-  background-color: teal;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-base-light);
   padding: 2rem 3.5rem;
 }
 
@@ -108,10 +125,10 @@ ol {
 ================================ */
 .site-nav,
 .site-footer {
-  background-color: teal;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-base-light);
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(51, 51, 51, 0.3);
+  box-shadow: 0 2px 6px var(--color-box-shadow);
 }
 
 .site-nav {
@@ -136,7 +153,7 @@ ol {
 .site-nav a,
 .site-footer a {
   display: block;
-  color: white;
+  color: var(--color-base-light);
   text-decoration: none;
   padding: 0.5rem 1rem;
 }
@@ -146,7 +163,7 @@ ol {
 .site-nav a:focus,
 .site-footer a:hover,
 .site-footer a:focus {
-  color: sandybrown;
+  color: var(--color-accent-active);
 }
 
 /* Aktuellen Menüpunkt hervorheben */
@@ -168,7 +185,7 @@ ol {
 
   cursor: pointer;
   background: inherit;
-  color: white;
+  color: var(--color-base-light);
   font: inherit;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -206,9 +223,6 @@ ol {
 /* ================================
    4. Startseite
 ================================ */
-.site-body-start {
-  padding-bottom: 0;
-}
 
 .startbild {
   display: flex;
@@ -244,8 +258,8 @@ ol {
   font-family: inherit;
   width: 16rem;
   padding: 0.5rem;
-  border: 1px solid dimgrey;
-  background-color: white;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-base-light);
   border-radius: 0.25rem;
 }
 
@@ -258,8 +272,8 @@ ol {
 .site-kontakt button {
   font-size: inherit;
   font-family: inherit;
-  background-color: teal;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-base-light);
   width: 17rem;
   padding: 1rem;
   border: none;
@@ -269,7 +283,7 @@ ol {
 
 .site-kontakt button:hover,
 .site-kontakt button:focus {
-  background-color: sandybrown;
+  background-color: var(--color-accent-active);
 }
 
 .site-kontakt,
@@ -334,9 +348,9 @@ ol {
 
 .button-links,
 .button-rechts {
-  background-color: teal;
+  background-color: var(--color-primary);
   border: none;
-  color: white;
+  color: var(--color-base-light);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -344,12 +358,12 @@ ol {
   margin: 0 0.5rem;
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3), 0 1px 10px rgb(51, 51, 51, 0.29);
+  box-shadow: 0 2px 6px var(--color-box-shadow), 0 1px 10px var(--color-box-shadow-smaler);
 }
 
 .button-links:hover,
 .button-rechts:hover {
-  background-color: sandybrown;
+  background-color: var(--color-accent-active);
 }
 
 /* ================================
@@ -367,8 +381,8 @@ ol {
 /* ================================
    8. Media Queries
 ================================ */
-/* Umrechnung 768 Pixel / 16px = 48remm*/
-@media screen and (min-width: 48rem) {
+/* Umrechnung 940 Pixel / 16px = 58.75remm*/
+@media screen and (min-width: 58.75rem) {
 
   body {
     font-size: 1.125rem;
@@ -402,7 +416,7 @@ ol {
 
   .button-links:hover,
   .button-rechts:hover {
-    background-color: sandybrown;
+    background-color: var(--color-accent-active);
   }
 
   .icon img {
@@ -416,7 +430,7 @@ ol {
   .site-nav {
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 6px rgb(51, 51, 51, 0.3);
+    box-shadow: 0 2px 6px var(--color-box-shadow));
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -506,12 +520,100 @@ ol {
   }
 
   html {
-    background: white;
-    color: black;
+    background: var(--color-base-light);
+    color: var(--color-base-dark);
   }
 
   .site-nav,
   .site-footer {
     display: none;
   }
+}
+
+
+/* ================================
+   10. Media Dark
+================================ */
+
+.toggle-button {
+  background: none;
+  display: inline-block;
+  padding: 0.625rem 1rem;
+  margin-left: 0rem;
+  border: none;
+  cursor: pointer;
+}
+.dark-mode.site-body {
+  background-color: var(--color-background-dark);
+  color: var(--color-background-light);
+  text-shadow: none;
+}
+.dark-mode .site-kontakt-adresse a,
+.dark-mode .adresse a {
+  color: var(--color-accent-active); /* Use a contrasting color for links in dark mode */
+}
+.dark-mode .site-kontakt-adresse a:hover,
+.dark-mode .site-kontakt-adresse a:focus,
+.dark-mode .adresse a:hover,
+.dark-mode .adresse a:focus {
+  color: var(--color-primary); /* Optionally, change the hover/focus color for better visibility */
+}
+.dark-mode {
+  .site-header,
+  .site-nav,
+  .site-footer {
+      background-color:var(--color-background-dark-nav_header_footer);
+      color: var(--color-background-light);
+      text-shadow: none;
+}
+  .button-links,
+  .button-rechts {
+    background-color: var(--color-primary);
+    color: var(--color-base-light);
+    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
+    text-shadow: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .toggle-button {
+    background: none;
+    display: inline-block;
+    padding: 0.625rem 1rem;
+    margin-left: 0rem;
+    border: none;
+    cursor: pointer;
+  }
+  body {
+    background-color: var(--color-background-dark);
+    color: var(--color-background-light);
+    text-shadow: none;
+  }
+  .dark-mode .site-kontakt-adresse a,
+  .dark-mode .adresse a {
+    color: var(--color-accent-active); /* Use a contrasting color for links in dark mode */
+  }
+  .dark-mode .site-kontakt-adresse a:hover,
+  .dark-mode .site-kontakt-adresse a:focus,
+  .dark-mode .adresse a:hover,
+  .dark-mode .adresse a:focus {
+    color: var(--color-primary); /* Optionally, change the hover/focus color for better visibility */
+  }
+  .site-nav,
+  .site-header,
+  .site-footer {
+    background-color:var(--color-background-dark-nav_header_footer);
+    color: var(--color-background-light);
+    text-shadow: none;
+  }
+
+  .button-links,
+  .button-rechts {
+    background-color: var(--color-primary);
+    color: var(--color-base-light);
+    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
+    text-shadow: none;
+  }
+
+
 }

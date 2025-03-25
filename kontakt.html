@@ -27,14 +27,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Die Verbindung zum Stylesheet -->
+    <!-- Die Verbindung zum Stylesheet & Javascripts-->
     <link href="css/style.css" rel="stylesheet">
+    <script src="script/gallerie.js" defer></script>
+    <script src="script/javascript.js" defer></script>
+    <script src="script/dark.js" defer></script>
 
     <!-- Die Verbindung zum Javascript -->
     <script src="script/javascript.js" async></script>
 </head>
 
-<body>
+<body class="site-body">
     <header class="site-header">
         <h1 class="titel">Hausmeisterdienste</h1>
         <div class="logo">
@@ -50,6 +53,11 @@
                 <li><a href="leistungen.html">Leistungen</a></li>
                 <li><a href="firma.html">Unsere Firma</a></li>
                 <li><a href="kontakt.html" class="current">Kontakt</a></li>
+                <li>
+                    <button class="toggle-button" onclick="toggleDarkMode()">
+                        <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -78,23 +86,20 @@
                     </form>
                 </section>
                 <section class="site-kontakt-adresse">
-                    <phone class="kontakt">
-                        <img class="bilder-content" src="pictures/Telefon50x50.png" alt="Telefonhörer-Zeichen"
-                        srcset="pictures/Telefon100x100.png 2x">
+                    <div class="kontakt">
+                        <img id="telefonIcon" class="bilder-content" src="pictures/Telefon-schwarz.svg" alt="Telefonhörer-Zeichen" width="50">
                         <span>
                             <a href="tel:+49 1234 56789">+49 1234 56789</a>
                         </span>
-                    </phone>
+                    </div>
                     <mail class="kontakt">
-                        <img class="bilder-content" src="pictures/Mail50x50.png" alt="At-Zeichen für E-Mail"
-                        srcset="pictures/Mail100x100.png 2x">
+                        <img id="mailIcon" class="bilder-content" src="pictures/Mail-schwarz.svg" alt="At-Zeichen für E-Mail" width="50">
                         <span>
                             <a href="mailto:info@mail.de">info@mail.de</a>
                         </span>
                     </mail>
                     <address class="kontakt">
-                        <img class="bilder-content" src="pictures/Haus50x50.png" alt="Haus-Zeichen für die Adresse"
-                        srcset="pictures/Haus100x100.png 2x">
+                        <img id="hausIcon" class="bilder-content" src="pictures/Haus-schwarz.svg" alt="Haus-Zeichen für die Adresse" width="50">
                         <span>
                             Straße 1, 12345 Musterstadt
                         </span>
