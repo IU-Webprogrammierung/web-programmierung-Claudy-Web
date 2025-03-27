@@ -8,10 +8,9 @@
    4. Startseite
    5. Kontaktseite
    6. Bildergalerie
-   7. Allgemeine Klassen & Utilities
-   8. Media Queries
-   9. Media Print
-   10. Media Dark
+   7. Media Queries
+   8. Media Print
+   9. Media Dark
 ================================ */
 
 /* ================================
@@ -47,7 +46,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 500;
@@ -84,7 +83,7 @@ main {
 
 h1 {
   padding-top: 1.5rem;
-  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -100,14 +99,11 @@ h2 {
   padding: 2rem 3.5rem;
 }
 
-.site-header h1 {
-  margin-bottom: 0;
-}
-
 .logo {
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   padding-bottom: 0rem;
-  align-items: end;
   width: 2.5rem;
 }
 
@@ -305,12 +301,8 @@ ol {
   background-color: var(--color-accent-active);
 }
 
-.site-kontakt,
-.site-kontakt-adresse {
-  margin: 1rem;
-}
-
 .kontakt {
+  margin: 1rem;
   display: flex;
   align-items: center;
 }
@@ -324,9 +316,7 @@ ol {
   margin-top: 2rem;
 }
 
-.kontakt span {
-  padding-top: 1rem;
-}
+
 
 /* ================================
    6. Bildergalerie
@@ -340,10 +330,6 @@ ol {
 }
 
 .gallerie figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin: 0;
   width: 100%;
 }
@@ -373,7 +359,6 @@ ol {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  font-size: 1rem;
   margin: 0 0.5rem;
   cursor: pointer;
   border-radius: 10px;
@@ -385,20 +370,9 @@ ol {
   background-color: var(--color-accent-active);
 }
 
-/* ================================
-   7. Allgemeine Klassen & Utilities
-================================ */
-.float-links {
-  float: left;
-  margin: 0 2rem 2rem 0;
-}
-
-.float-stoppen {
-  clear: both;
-}
 
 /* ================================
-   8. Media Queries
+   7. Media Queries
 ================================ */
 /* Umrechnung 940 Pixel / 16px = 58.75remm*/
 @media screen and (min-width: 58.75rem) {
@@ -438,10 +412,6 @@ ol {
     background-color: var(--color-accent-active);
   }
 
-  .icon img {
-    width: 1.5rem;
-  }
-
   .menubutton {
     display: none !important;
   }
@@ -455,18 +425,11 @@ ol {
     background-repeat: no-repeat;
   }
 
-  .site-nav .inside {
-    padding: 0 1rem;
-  }
-
   .site-footer ul,
   .site-nav ul,
   .site-footer-start ul {
     max-height: none !important;
-    display: flex;
     flex-direction: row;
-    padding: 0;
-    margin: 0;
   }
 
   .site-footer li,
@@ -487,10 +450,7 @@ ol {
   }
 
   .kontakt {
-    display: flex;
     flex-direction: row;
-    align-items: baseline;
-    align-items: center;
   }
 
   .kontakt img {
@@ -499,15 +459,9 @@ ol {
     margin-top: 1.5rem;
   }
 
-  .kontakt::before {
-    margin-top: 2rem;
-  }
-
   .kontakt span {
-    vertical-align: middle;
     padding-top: 1rem;
   }
-
 }
 
 /* Umrechnung 1024 Pixel / 16px = 64remm*/
@@ -519,7 +473,6 @@ ol {
 
   .gallerie figure img {
     width: 100%;
-    height: auto;
   }
 
   .text-content {
@@ -529,7 +482,7 @@ ol {
 }
 
 /* ================================
-   9. Media Print
+   8. Media Print
 ================================ */
 @media print {
 
@@ -551,7 +504,7 @@ ol {
 
 
 /* ================================
-   10. Media Dark
+   9. Media Dark
 ================================ */
 
 .toggle-button {

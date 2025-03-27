@@ -17,10 +17,6 @@ var slideIndex = 1;
 
 showDivs(slideIndex);
 
-function plusDivs(n, gallerieId) {
-  showDivs(slideIndex += n, gallerieId);
-}
-
 function showDivs(n, gallerieId) {
   var i;
   var x = checkGalleries(gallerieId);
