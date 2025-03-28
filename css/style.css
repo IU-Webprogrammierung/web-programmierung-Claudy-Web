@@ -458,7 +458,11 @@ ol {
   .site-nav li,
   .site-footer-start li {
     flex: 1;
-    margin: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    z-index: auto;
+    margin-right: 0;
   }
 
   .site-nav img {
@@ -505,7 +509,6 @@ ol {
   .text-content {
     padding-left: 2rem;
   }
-
 }
 
 /* ================================
