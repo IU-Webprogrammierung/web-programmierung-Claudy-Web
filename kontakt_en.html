@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="no-js">
+<html lang="en" class="no-js">
 
 <head>
     <!-- Infos über diese Webseite -->
@@ -11,16 +11,15 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Hausmeisterdienste" />
+    <meta name="apple-mobile-web-app-title" content="Caretaker services" />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <!-- Titel der Webseite -->
-    <title>Hausmeisterdienste</title>
+    <title>Caretaker services</title>
 
     <!-- Beschreibung der Webseite -->
-    <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
-        Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
-        Winterdienst umfasst.">
+    <meta name="description" content="Our caretaker services offer you comprehensive support for your properties, which includes 
+    professional garden maintenance, reliable property management and effective winter service.">
 
     <!-- Schrift Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,20 +41,20 @@
 
 <body class="site-body">
     <header class="site-header">
-        <h1 class="titel">Hausmeisterdienste</h1>
+        <h1 class="titel">Caretaker services</h1>
         <div class="logo">
             <img src="pictures/LogoWeißTransparent.svg"
-               alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon." width="75">
+               alt="Logo icon with 2 triangles inside each other and a polygon." width="75">
         </div>
     </header>
     <nav class="site-nav">
         <div class="inside">
             <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
             <ul>
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="leistungen.html">Leistungen</a></li>
-                <li><a href="firma.html">Unsere Firma</a></li>
-                <li><a href="kontakt.html" class="current">Kontakt</a></li>
+                <li><a href="index_en.html">Homepage</a></li>
+                <li><a href="leistungen_en.html">Services</a></li>
+                <li><a href="firma_en.html">Our company</a></li>
+                <li><a href="kontakt_en.html" class="current">Contact</a></li>
                 <li>
                     <button class="toggle-button" onclick="toggleDarkMode()">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
@@ -64,8 +63,8 @@
                 <li>
                     <form action="" method="get">
                         <select id="language-switcher" onchange="switchLanguage()">
-                            <option lang="de" value="index.html" selected>Deutsch</option>
-                            <option lang="en" value="index_en.html">English</option>
+                            <option lang="de" value="index.html">Deutsch</option>
+                            <option lang="en" value="index_en.html" selected>English</option>
                         </select>
                     </form>
                 </li>
@@ -82,53 +81,53 @@
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div>
-                            <label for="email">E-Mail</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div>
-                            <label for="betreff">Betreff</label>
+                            <label for="betreff">Subject</label>
                             <input type="betreff" id="betreff" name="betreff" required>
                         </div>
                         <div>
-                            <label for="nachricht">Nachricht (Optional)</label>
+                            <label for="nachricht">Message (Optional)</label>
                             <textarea name="nachricht" id="nachricht" cols="20" rows="5"></textarea>
                         </div>
-                        <button type="submit" value="nummer1">Senden</button>
+                        <button type="submit" value="nummer1">Send</button>
                     </form>
                 </section>
                 <section class="site-kontakt-adresse">
                     <div class="kontakt">
-                        <img id="telefonIcon" class="bilder-content" src="pictures/Telefon-schwarz.svg" alt="Telefonhörer-Zeichen" width="50">
+                        <img id="telefonIcon" class="bilder-content" src="pictures/Telefon-schwarz.svg" alt="Telephone handset sign" width="50">
                         <span>
                             <a href="tel:+49 1234 56789">+49 1234 56789</a>
                         </span>
                     </div>
                     <mail class="kontakt">
-                        <img id="mailIcon" class="bilder-content" src="pictures/Mail-schwarz.svg" alt="At-Zeichen für E-Mail" width="50">
+                        <img id="mailIcon" class="bilder-content" src="pictures/Mail-schwarz.svg" alt="At sign for e-mail" width="50">
                         <span>
                             <a href="mailto:info@mail.de">info@mail.de</a>
                         </span>
                     </mail>
                     <address class="kontakt">
-                        <img id="hausIcon" class="bilder-content" src="pictures/Haus-schwarz.svg" alt="Haus-Zeichen für die Adresse" width="50">
+                        <img id="hausIcon" class="bilder-content" src="pictures/Haus-schwarz.svg" alt="House sign for the address" width="50">
                         <span>
-                            Straße 1, 12345 Musterstadt
+                            Street 1, 12345 Model city
                         </span>
                     </address>
                 </section>
             </article>
         </div>
         <button id="scrollTopButton" class="scroll-top-button" onclick="scrollToTop()">
-            <img src="pictures/button-hoch.svg" class="icon" alt="Nach oben">
+            <img src="pictures/button-hoch.svg" class="icon" alt="Upstairs">
         </button>
     </main>
     <footer class="site-footer">
         <div class="inside">
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="kontakt.html" class="current">Kontakt</a></li>
-                    <li><a href="datenschutz.html">Datenschutz</a></li>
-                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="kontakt_en.html" class="current">Contact</a></li>
+                    <li><a href="datenschutz_en.html">Privacy policy</a></li>
+                    <li><a href="impressum_en.html">Imprint</a></li>
                 </ul>
             </nav>
         </div>

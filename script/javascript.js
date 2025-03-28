@@ -13,3 +13,9 @@ window.onscroll = function() {
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
+
+  function switchLanguage() {
+    var languageSwitcher = document.getElementById('language-switcher');
+    var selectedValue = languageSwitcher.value;
+    window.location.href = selectedValue;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de"  class="no-js">
+<html lang="en" class="no-js">
 
 <head>
     <!-- Infos über diese Webseite -->
@@ -11,16 +11,15 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Hausmeisterdienste" />
+    <meta name="apple-mobile-web-app-title" content="Caretaker services" />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <!-- Titel der Webseite -->
-    <title>Hausmeisterdienste</title>
+    <title>Caretaker services</title>
 
     <!-- Beschreibung der Webseite -->
-    <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
-    Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
-    Winterdienst umfasst.">
+    <meta name="description" content="Our caretaker services offer you comprehensive support for your properties, which includes 
+    professional garden maintenance, reliable property management and effective winter service.">
 
     <!-- Schrift Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,26 +32,26 @@
     <script src="script/javascript.js" defer></script>
     <script src="script/dark.js" defer></script>
 
-    <link rel="alternate" href="impressum.html" hreflang="de">
-    <link rel="alternate" href="impressum_en.html" hreflang="en">
+    <link rel="alternate" href="firma.html" hreflang="de">
+    <link rel="alternate" href="firma_en.html" hreflang="en">
 </head>
 
 <body class="site-body">
     <header class="site-header">
-        <h1 class="titel">Hausmeisterdienste</h1>
+        <h1 class="titel">Caretaker services</h1>
         <div class="logo">
             <img src="pictures/LogoWeißTransparent.svg"
-               alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon." width="75">
+               alt="Logo icon with 2 triangles inside each other and a polygon." width="75">
         </div>
     </header>
     <nav class="site-nav">
         <div class="inside">
             <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
             <ul>
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="leistungen.html">Leistungen</a></li>
-                <li><a href="firma.html">Unsere Firma</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="index_en.html">Homepage</a></li>
+                <li><a href="leistungen_en.html">Services</a></li>
+                <li><a href="firma_en.html" class="current">Our company</a></li>
+                <li><a href="kontakt_en.html">Contact</a></li>
                 <li>
                     <button class="toggle-button" onclick="toggleDarkMode()">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
@@ -61,8 +60,8 @@
                 <li>
                     <form action="" method="get">
                         <select id="language-switcher" onchange="switchLanguage()">
-                            <option lang="de" value="index.html" selected>Deutsch</option>
-                            <option lang="en" value="index_en.html">English</option>
+                            <option lang="de" value="index.html">Deutsch</option>
+                            <option lang="en" value="index_en.html" selected>English</option>
                         </select>
                     </form>
                 </li>
@@ -72,36 +71,33 @@
     <main class="site-content">
         <div class="inside">
             <article>
-                <h2>Impressum</h2>
-                <address class="adresse">
-                    <p>Name: Hausmeisterdienste</p>
-                    <p>Strasse: Straße 1</p>
-                    <p>12345 Musterstadt</p>
-                    <div>
-                        <p>
-                            <a href="tel:+49 1234 56789">+49 1234 56789</a>
-                        </p>
-                    </div>
-                    <mail>
-                        <p>
-                            <a href="mailto:info@mail.de">info@mail.de</a>
-                        </p>
-                    </mail>
-                    Geschäftsführer: Mustermann und Musterfrau
-                </address>
+                <h2>Our company</h2>
+                <section>
+                    <h3>Our name and contact person</h3>
+                    <p>Name: Caretaker services</p>
+                    <p>Contact: First Name Last Name</p>
+                    <p>email: info@mail.de</p>
+                    <p>phone: +49 1234 56789</p>
+                </section>
+                <section>
+                    <p>We are a passionate team of caretaker service people who look after your properties professionally and reliably.</p>
+                    <p>We offer you comprehensive support for your properties, which includes professional garden maintenance, 
+                        reliable property management and effective winter service. We feel that your owners want to ensure your 
+                        lifetime and our trust.</p>
+                </section>
             </article>
         </div>
         <button id="scrollTopButton" class="scroll-top-button" onclick="scrollToTop()">
-            <img src="pictures/button-hoch.svg" class="icon" alt="Nach oben">
+            <img src="pictures/button-hoch.svg" class="icon" alt="Upstairs">
         </button>
     </main>
     <footer class="site-footer">
         <div class="inside">
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="datenschutz.html">Datenschutz</a></li>
-                    <li><a href="impressum.html" class="current">Impressum</a></li>
+                    <li><a href="kontakt_en.html">Contact</a></li>
+                    <li><a href="datenschutz_en.html">Privacy policy</a></li>
+                    <li><a href="impressum_en.html">Imprint</a></li>
                 </ul>
             </nav>
         </div>

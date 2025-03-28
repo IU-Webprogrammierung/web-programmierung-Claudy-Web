@@ -33,6 +33,9 @@
     <script src="script/gallerie.js" defer></script>
     <script src="script/javascript.js" defer></script>
     <script src="script/dark.js" defer></script>
+
+    <link rel="alternate" href="leistungen.html" hreflang="de">
+    <link rel="alternate" href="leistungen_en.html" hreflang="en">
 </head>
 
 <body class="site-body">
@@ -55,6 +58,16 @@
                     <button class="toggle-button" onclick="toggleDarkMode()">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
                     </button>
+                </li>
+                <li>
+                    <form action="" method="get">
+                        <select id="language-switcher">
+                            <option lang="de" value="de"selected>Deutsch</option>
+                            <option lang="en" value="en">English</option>
+                            <!-- <option lang="es" value="es">Español</option>
+                            <option lang="fr" value="fr">Français</option> -->
+                        </select>
+                      </form>
                 </li>
             </ul>
         </div>
@@ -180,7 +193,7 @@
                     <figure>
                         <img class="gallerie-bilder-objekt" src="pictures/Hecken-schneiden420x280.webp" alt="Person schneidet Hecke"
                             srcset="pictures/Hecken-schneiden840x560.webp 2x" data-caption="Person schneidet Hecke"></img>
-                            <figcaption>Gartenwerkzeuge auf Rasen</figcaption>
+                            <figcaption>Person schneidet Hecke</figcaption>
                     </figure>
                     <div class="gallerie-buttons">
                         <button class="button-links" onclick="plusDivs(-1, 'objekt')">

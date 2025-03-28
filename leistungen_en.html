@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <!-- Infos über diese Webseite -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon/favicon96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Caretaker services" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <!-- Titel der Webseite -->
+    <title>Caretaker services</title>
+
+    <!-- Beschreibung der Webseite -->
+    <meta name="description" content="Our caretaker services offer you comprehensive support for your properties, which includes 
+    professional garden maintenance, reliable property management and effective winter service.">
+
+    <!-- Schrift Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Die Verbindung zum Stylesheet & Javascripts-->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="script/gallerie.js" defer></script>
+    <script src="script/javascript.js" defer></script>
+    <script src="script/dark.js" defer></script>
+
+    <link rel="alternate" href="leistungen.html" hreflang="de">
+    <link rel="alternate" href="leistungen_en.html" hreflang="en">
+</head>
+
+<body class="site-body">
+    <header class="site-header">
+        <h1 class="titel">Caretaker services</h1>
+        <div class="logo">
+            <img src="pictures/LogoWeißTransparent.svg"
+                alt="Logo icon with 2 triangles inside each other and a polygon." width="75" height="75">
+        </div>
+    </header>
+    <nav class="site-nav">
+        <div class="inside">
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
+            <ul>
+                <li><a href="index_en.html">Homepage</a></li>
+                <li><a href="leistungen_en.html" class="current">Services</a></li>
+                <li><a href="firma_en.html">Our company</a></li>
+                <li><a href="kontakt_en.html">Contact</a></li>
+                <li>
+                    <button class="toggle-button" onclick="toggleDarkMode()">
+                        <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
+                    </button>
+                </li>
+                <li>
+                    <form action="" method="get">
+                        <select id="language-switcher" onchange="switchLanguage()">
+                            <option lang="de" value="index.html">Deutsch</option>
+                            <option lang="en" value="index_en.html" selected>English</option>
+                        </select>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="site-content" id="content">
+        <div class="inside">
+            <h2>Winter service</h2>
+            <article class="article">
+                <div  id="winter" class="gallerie">
+                        <figure>
+                            <img class="gallerie-bilder-winter" src="pictures/Schneefräse420x280.webp" alt="Snow blower in use"
+                                srcset="pictures/Schneefräse840x560.webp 2x" data-caption="Snow blower in use">
+                                <figcaption>Snow blower in use</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="gallerie-bilder-winter" src="pictures/Schnee-schaufeln420x280.webp" alt="Person shoveling snow"
+                                srcset="pictures/Schnee-schaufeln840x560.webp 2x" data-caption="Person shoveling snow">
+                            <figcaption>Person shoveling snow</figcaption>
+                        </figure>
+                        <figure>
+                            <img class="gallerie-bilder-winter" src="pictures/Schneeschippe420x280.webp" alt="Snow shovel in the foreground, 
+                            background blurred mountains" srcset="pictures/Schneeschippe840x560.webp 2x"
+                                data-caption="Snow shovel in the foreground, background blurred mountains">
+                                <figcaption>Snow shovel in the foreground, background blurred mountains</figcaption>
+                        </figure>
+                        <div class="gallerie-buttons">
+                            <button class="button-links" onclick="plusDivs(-1, 'winter')">
+                                <img src="pictures/button-links.svg" class="icon" alt="Double arrow to the left"></img>
+                            </button>
+                            <button class="button-rechts" onclick="plusDivs(1, 'winter')">
+                                <img src="pictures/button-rechts.svg" class="icon" alt="Double arrow to the right"></img>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p>
+                            Our winter service ensures your safety and the unrestricted usability of your traffic areas during 
+                            the cold season. With our reliable and professional service, we guarantee prompt and thorough snow 
+                            removal as well as the gritting of pavements, driveways, parking lots and other affected areas.
+                        </p>
+                        <p>
+                            Our team is available around the clock to respond quickly to winter weather conditions. Thanks to 
+                            continuous weather monitoring, we are able to take preventive measures and prevent dangerous icy 
+                            conditions at an early stage. We rely on state-of-the-art clearing equipment and environmentally 
+                            friendly gritting agents to offer an effective and sustainable solution.
+                        </p>
+                        <p>
+                            In addition, we offer individual support and tailor-made solutions for private, commercial and public 
+                            spaces. With our comprehensive service, you can be sure that your property will remain accessible 
+                            and safe at all times, even in snow and ice – without any stress or effort for you.
+                        </p>
+                    </div>
+            </article>
+            <h2>Gardening</h2>
+            <article class="article">
+                <div id="garten" class="gallerie">
+                    <figure>
+                        <img class="gallerie-bilder-garten" src="pictures/Rasen-mähen420x280.webp"
+                            alt="Woman mowing lawn with sitting lawn mower" srcset="pictures/Rasen-mähen840x560.webp 2x"
+                            data-caption="Woman mowing lawn with sitting lawn mower"></img>
+                        <figcaption>Woman mowing lawn with sitting lawn mower</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-garten" src="pictures/Rasenmäher420x280.webp" alt="Lawn mowers on lawns"
+                            srcset="pictures/Rasenmäher840x560.webp 2x" data-caption="Lawn mowers on lawns"></img>
+                            <figcaption>Lawn mowers on lawns</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-garten" src="pictures/Rasenmäher-vorne420x280.webp"
+                            alt="Front view of a lawnmower" srcset="pictures/Rasenmäher-vorne840x560.webp 2x"
+                            data-caption="Front view of a lawnmower"></img>
+                            <figcaption>Front view of a lawnmower</figcaption>
+                    </figure>
+                    <div class="gallerie-buttons">
+                        <button class="button-links" onclick="plusDivs(-1, 'garten')">
+                            <img src="pictures/button-links.svg" class="icon" alt="Double arrow to the left"></img>
+                        </button>
+                        <button class="button-rechts" onclick="plusDivs(1, 'garten')">
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Double arrow to the right"></img>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p>
+                        Our garden maintenance includes professional and holistic care of your green spaces in order 
+                        to preserve the beauty, order and health of your outdoor facilities. We offer you a wide range 
+                        of services that are individually tailored to the needs of your garden.
+                    </p>
+                    <p>
+                        Our services include regular lawn mowing, hedge trimming, weed removal, planting, fertilization 
+                        and soil care. In addition, we take care of the professional care of beds, trees and shrubs in 
+                        order to optimally promote growth and flowering. Seasonal work such as autumn leaf removal and 
+                        spring planting are also part of our range of services.
+                    </p>
+                    <p>
+                        We attach great importance to a harmonious design and functional use of your garden areas. We will 
+                        be happy to advise you on suitable plant species, sustainable irrigation systems and design 
+                        concepts to transform your property into a true oasis of well-being.
+                    </p>
+                    <p>
+                        Our goal is to make your outdoor areas not only well-maintained, but also attractive and inviting – 
+                        whether for a private retreat or as a representative environment for your company.
+                    </p>
+                </div>
+            </article>
+            <h2>Property management</h2>
+            <article class="article">
+                <div id="objekt" class="gallerie">
+                    <figure>
+                        <img class="gallerie-bilder-objekt" src="pictures/Objektbetreuung_lila420x280.webp"
+                            alt="green anthracite building with garden" srcset="pictures/Objektbetreuung_lila840x560.webp 2x"
+                            data-caption="green anthracite building with garden"></img>
+                        <figcaption>green anthracite building with garden</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-objekt" src="pictures/Objektbetreuung-mit-Garten420x280.webp"
+                            alt="Brick building with garden" srcset="pictures/Objektbetreuung-mit-Garten840x560.webp 2x"
+                            data-caption="Brick building with garden"></img>
+                            <figcaption>Brick building with garden</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-objekt" src="pictures/Hecken-schneiden420x280.webp" alt="Person cutting hedge"
+                            srcset="pictures/Hecken-schneiden840x560.webp 2x" data-caption="Person cutting hedge"></img>
+                            <figcaption>Person cutting hedge</figcaption>
+                    </figure>
+                    <div class="gallerie-buttons">
+                        <button class="button-links" onclick="plusDivs(-1, 'objekt')">
+                            <img src="pictures/button-links.svg" class="icon" alt="Double arrow to the left"></img>
+                        </button>
+                        <button class="button-rechts" onclick="plusDivs(1, 'objekt')">
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Double arrow to the right"></img>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p>
+                        Our property management offers you comprehensive and professional maintenance of your properties 
+                        and outdoor facilities in order to maintain their value, safety and functionality in the long 
+                        term. We take care of all the care, maintenance and control tasks to ensure the proper use of 
+                        your buildings.
+                    </p>
+                    <p>
+                        Our service includes, among other things, regular cleaning, minor repairs, technical checks, 
+                        green space maintenance and monitoring of the building fabric. In addition, we ensure that building 
+                        services systems function properly, that minor damage is detected and repaired at an early stage and 
+                        that your property always remains in optimal condition.
+                    </p>
+                    <p>
+                        Through regular inspections and preventive measures, we help to avoid major and cost-intensive 
+                        damage. Our flexible and tailor-made services are aimed at private property owners as well as 
+                        commercial customers and property managers.
+                    </p>
+                    <p>
+                        With our professional support, you can concentrate on your core business or your personal use 
+                        with peace of mind – we will reliably take care of the rest.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <button id="scrollTopButton" class="scroll-top-button" onclick="scrollToTop()">
+            <img src="pictures/button-hoch.svg" class="icon" alt="Upstairs">
+        </button>
+    </main>
+    <footer class="site-footer">
+        <div class="inside">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="kontakt_en.html">Contact</a></li>
+                    <li><a href="datenschutz_en.html">Privacy policy</a></li>
+                    <li><a href="impressum_en.html">Imprint</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" class="no-js">
+<html lang="en" class="no-js">
 
 <head>
     <!-- Infos über diese Webseite -->
@@ -11,16 +11,15 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="Hausmeisterdienste" />
+    <meta name="apple-mobile-web-app-title" content="Caretaker services" />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
     <!-- Titel der Webseite -->
-    <title>Hausmeisterdienste</title>
+    <title>Caretaker services</title>
 
     <!-- Beschreibung der Webseite -->
-    <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
-    Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
-    Winterdienst umfasst.">
+    <meta name="description" content="Our caretaker services offer you comprehensive support for your properties, which includes 
+    professional garden maintenance, reliable property management and effective winter service.">
 
     <!-- Schrift Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,10 +38,10 @@
 
 <body class="site-body">
     <header class="site-header">
-            <h1 class="titel">Hausmeisterdienste</h1>
+            <h1 class="titel">Caretaker services</h1>
             <div class="logo">
                 <img src="pictures/LogoWeißTransparent.svg"
-                alt="Logosymbol mit 2 Dreiecken ineinander und einem Polygon.">
+                alt="Logo icon with 2 triangles inside each other and a polygon.">
             </div>
 
     </header>
@@ -50,23 +49,21 @@
         <div class="inside">
             <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
             <ul>
-                <li><a href="index.html" class="current">Startseite</a></li>
-                <li><a href="leistungen.html">Leistungen</a></li>
-                <li><a href="firma.html">Unsere Firma</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="index_en.html" class="current">Homepage</a></li>
+                <li><a href="leistungen_en.html">Services</a></li>
+                <li><a href="firma_en.html">Our company</a></li>
+                <li><a href="kontakt_en.html">Contact</a></li>
                 <li>
                     <button class="toggle-button" onclick="toggleDarkMode()">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
                     </button>
                 </li>
-                <li>
-                    <form action="" method="get">
-                        <select id="language-switcher" onchange="switchLanguage()">
-                            <option lang="de" value="index.html" selected>Deutsch</option>
-                            <option lang="en" value="index_en.html">English</option>
-                        </select>
-                    </form>
-                </li>
+                <form action="" method="get">
+                    <select id="language-switcher" onchange="switchLanguage()">
+                        <option lang="de" value="index.html">Deutsch</option>
+                        <option lang="en" value="index_en.html" selected>English</option>
+                    </select>
+                </form>
             </ul>
         </div>
     </nav>
@@ -74,63 +71,64 @@
         <div class="inside">
             <div class="startbild">
                 <img src="pictures/WinterdienstSchneRaeumen614x408.webp"
-                    alt="Ein Sitzrasenmäher mit Schneeschild und einer Schneeschaufel im Winter."
+                    alt="A sit-on lawn mower with a snow blade and a snow shovel in winter."
                     srcset="pictures/WinterdienstSchneRaeumen1228x816.webp 2x">
             </div>
+
+
             <article class="article">
                 <div id="start" class="gallerie">
                     <figure>
-                        <img class="gallerie-bilder" src="pictures/Rasenpflege420x280.webp" alt="Gartenwerkzeuge auf Rasen."
+                        <img class="gallerie-bilder" src="pictures/Rasenpflege420x280.webp" alt="Garden tools on lawn."
                             srcset="pictures/Rasenpflege840x560.webp 2x"
-                            data-caption="Gartenwerkzeuge auf Rasen">
-                        <figcaption>Gartenwerkzeuge auf Rasen</figcaption>
+                            data-caption="Garden tools on lawns">
+                        <figcaption>Garden tools on lawns</figcaption>
                     </figure>
                     <figure>
                         <img class="gallerie-bilder" src="pictures/Objektbetreuung420x280.webp"
-                            alt="Mehrstöckige Wohnungen mit Gartenanlage." srcset="pictures/Objektbetreuung840x560.webp 2x"
-                            data-caption="Mehrstöckige Wohnungen mit Gartenanlage">
-                        <figcaption>Mehrstöckige Wohnungen mit Gartenanlage</figcaption>
+                            alt="Multi-storey apartments with garden area." srcset="pictures/Objektbetreuung840x560.webp 2x"
+                            data-caption="Multi-storey apartments with garden area">
+                        <figcaption>Multi-storey apartments with garden area</figcaption>
                     </figure>
                     <figure>
                         <img class="gallerie-bilder" src="pictures/WinterdienstTraktor420x280.webp"
-                            alt="Traktor mit Schneepflug im Einsatz für den Winterdienst."
+                            alt="Tractor with snow plough in use for winter service."
                             srcset="pictures/WinterdienstTraktor840x560.webp 2x"
-                            data-caption="Traktor mit Schneepflug im Einsatz für den Winterdienst">
-                        <figcaption>Traktor mit Schneepflug im Einsatz für den Winterdienst</figcaption>
+                            data-caption="Tractor with snow plough in use for winter service">
+                        <figcaption>Tractor with snow plough in use for winter service</figcaption>
                     </figure>
                     <div class="gallerie-buttons">
                         <button class="button-links" onclick="plusDivs(-1, 'start')">
-                            <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
+                            <img src="pictures/button-links.svg" class="icon" alt="Double arrow to the left"></img>
                         </button>
                         <button class="button-rechts" onclick="plusDivs(1, 'start')">
-                            <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"></img>
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Double arrow to the right"></img>
                         </button>
                     </div>
                 </div>
                 <div class="text-content">
                     <p>
-                        Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer Immobilien, die eine
-                        professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven Winterdienst
-                        umfasst. Wir kümmern uns ganzjährig um die Instandhaltung und Pflege Ihrer Gebäude und Außenanlagen,
-                        sodass Ihre Immobilien stets in einwandfreiem Zustand bleiben. Von der regelmäßigen Rasen- und
-                        Pflanzenpflege im Frühjahr und Sommer, bis hin zum zuverlässigen Schneeräumen und Streuen im Winter
-                        – unser Service deckt alle Ihre Bedürfnisse ab.
+                        Our caretaker services offer you comprehensive support for your properties, which includes 
+                        professional garden maintenance, reliable property management and effective winter service. We 
+                        take care of the maintenance and care of your buildings and outdoor facilities all year round, 
+                        so that your properties always remain in perfect condition. From regular lawn and plant care in 
+                        spring and summer, to reliable snow clearing and gritting in winter – our service covers all your needs.
                     </p>
                 </div>
                 
             </article>
         </div>
         <button id="scrollTopButton" class="scroll-top-button" onclick="scrollToTop()">
-            <img src="pictures/button-hoch.svg" class="icon" alt="Nach oben">
+            <img src="pictures/button-hoch.svg" class="icon" alt="Upstairs">
         </button>
     </main>
     <footer class="site-footer">
         <div class="inside">
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="datenschutz.html">Datenschutz</a></li>
-                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="kontakt_en.html">Contact</a></li>
+                    <li><a href="datenschutz_en.html">Privacy policy</a></li>
+                    <li><a href="impressum_en.html">Imprint</a></li>
                 </ul>
             </nav>
         </div>

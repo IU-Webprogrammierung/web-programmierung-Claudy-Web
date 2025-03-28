@@ -32,6 +32,9 @@
     <script src="script/gallerie.js" defer></script>
     <script src="script/javascript.js" defer></script>
     <script src="script/dark.js" defer></script>
+
+    <link rel="alternate" href="datenschutz.html" hreflang="de">
+    <link rel="alternate" href="datenschutz_en.html" hreflang="en">
 </head>
 
 <body class="site-body">
@@ -54,6 +57,14 @@
                     <button class="toggle-button" onclick="toggleDarkMode()">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
                     </button>
+                </li>
+                <li>
+                    <form action="" method="get">
+                        <select id="language-switcher" onchange="switchLanguage()">
+                            <option lang="de" value="index.html" selected>Deutsch</option>
+                            <option lang="en" value="index_en.html">English</option>
+                        </select>
+                    </form>
                 </li>
             </ul>
         </div>

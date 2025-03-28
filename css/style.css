@@ -152,7 +152,8 @@ ol {
 
 /* Navigationslinks gestalten */
 .site-nav a,
-.site-footer a {
+.site-footer a,
+.site-nav form {
   display: block;
   color: var(--color-base-light);
   text-decoration: none;
@@ -238,6 +239,18 @@ ol {
 
 .scroll-top-button:hover {
   background-color: var(--color-accent-active);
+}
+
+.site-nav select {
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-base-light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--color-box-shadow), 0 1px 10px var(--color-box-shadow-smaler);
 }
 
 /* ================================
@@ -445,7 +458,12 @@ ol {
   .site-nav li,
   .site-footer-start li {
     flex: 1;
-    margin: 2rem;
+    margin: 1.5rem;
+  }
+
+  .site-nav img {
+    width: 3rem;
+    min-width: fit-content;
   }
 
   .article {
@@ -523,6 +541,7 @@ ol {
   margin-left: 0rem;
   border: none;
   cursor: pointer;
+  max-width: fit-content;
 }
 .dark-mode.site-body {
   background-color: var(--color-background-dark);
