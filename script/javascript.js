@@ -10,10 +10,12 @@ window.onscroll = function() {
     }
   };
 
+  // Nach oben springen
   function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // Sprachenwechsel
   function switchLanguage() {
     var languageSwitcher = document.getElementById('language-switcher');
     var selectedValue = languageSwitcher.value;

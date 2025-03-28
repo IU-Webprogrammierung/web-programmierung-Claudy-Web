@@ -49,7 +49,7 @@
     </header>
     <nav class="site-nav">
         <div class="inside">
-            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
             <ul>
                 <li><a href="index_en.html">Homepage</a></li>
                 <li><a href="leistungen_en.html">Services</a></li>
@@ -78,15 +78,15 @@
                     <form action="" method="post">
                         <div>
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required oninvalid="this.setCustomValidity('Please fill in this field.')" oninput="this.setCustomValidity('')">
                         </div>
                         <div>
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Please enter an email address.')" oninput="this.setCustomValidity('')">
                         </div>
                         <div>
                             <label for="betreff">Subject</label>
-                            <input type="betreff" id="betreff" name="betreff" required>
+                            <input type="betreff" id="betreff" name="betreff" required oninvalid="this.setCustomValidity('Please fill in this field.')" oninput="this.setCustomValidity('')">
                         </div>
                         <div>
                             <label for="nachricht">Message (Optional)</label>

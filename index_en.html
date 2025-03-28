@@ -47,7 +47,7 @@
     </header>
     <nav class="site-nav">
         <div class="inside">
-            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
+            <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menu</button>
             <ul>
                 <li><a href="index_en.html" class="current">Homepage</a></li>
                 <li><a href="leistungen_en.html">Services</a></li>
@@ -58,12 +58,14 @@
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
                     </button>
                 </li>
-                <form action="" method="get">
-                    <select id="language-switcher" onchange="switchLanguage()">
-                        <option lang="de" value="index.html">Deutsch</option>
-                        <option lang="en" value="index_en.html" selected>English</option>
-                    </select>
-                </form>
+                <li>
+                    <form action="" method="get">
+                        <select id="language-switcher" onchange="switchLanguage()">
+                            <option lang="de" value="index.html">Deutsch</option>
+                            <option lang="en" value="index_en.html" selected>English</option>
+                        </select>
+                    </form>
+                </li>
             </ul>
         </div>
     </nav>
