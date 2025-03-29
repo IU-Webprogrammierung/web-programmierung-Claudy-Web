@@ -19,5 +19,12 @@ window.onscroll = function() {
   function switchLanguage() {
     var languageSwitcher = document.getElementById('language-switcher');
     var selectedValue = languageSwitcher.value;
-    window.location.href = selectedValue;
+    var currentPath = window.location.pathname;
+
+    // Replace the current language part of the URL with the selected language
+    if (currentPath.includes('_en')) {
+        window.location.href = currentPath.replace('_en', '');
+    } else {
+        window.location.href = currentPath.replace('.html', '_en.html');
+    }
 }
