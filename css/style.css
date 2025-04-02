@@ -596,13 +596,13 @@ ol {
   }
   .dark-mode .site-kontakt-adresse a,
   .dark-mode .adresse a {
-    color: var(--color-accent-active); /* Use a contrasting color for links in dark mode */
+    color: var(--color-accent-active); /* Kontrastfarbe für Links */
   }
   .dark-mode .site-kontakt-adresse a:hover,
   .dark-mode .site-kontakt-adresse a:focus,
   .dark-mode .adresse a:hover,
   .dark-mode .adresse a:focus {
-    color: var(--color-primary); /* Optionally, change the hover/focus color for better visibility */
+    color: var(--color-primary);
   }
   .site-nav,
   .site-header,
