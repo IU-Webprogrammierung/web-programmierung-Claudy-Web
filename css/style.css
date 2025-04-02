@@ -32,6 +32,7 @@ html {
   --color-box-shadow-dark-smaler: rgb(151, 151, 151, 0.29);
   --color-background-dark: #262626;
   --color-background-dark-nav_header_footer: #222;
+  --color-accent-active-dark: rgb(192, 130, 77);
 
   scroll-behavior: smooth;
   background-color: transparent;
@@ -223,11 +224,11 @@ ol {
 }
 
 .scroll-top-button {
-  display: none; /* Initially hidden */
+  display: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px; /* Square size */
+  width: 50px;
   height: 50px;
   background-color: var(--color-primary);
   border: none;
@@ -555,13 +556,13 @@ ol {
 }
 .dark-mode .site-kontakt-adresse a,
 .dark-mode .adresse a {
-  color: var(--color-accent-active); /* Use a contrasting color for links in dark mode */
+  color: var(--color-accent-active);
 }
 .dark-mode .site-kontakt-adresse a:hover,
 .dark-mode .site-kontakt-adresse a:focus,
 .dark-mode .adresse a:hover,
 .dark-mode .adresse a:focus {
-  color: var(--color-primary); /* Optionally, change the hover/focus color for better visibility */
+  color: var(--color-primary);
 }
 .dark-mode {
   .site-header,
@@ -570,13 +571,31 @@ ol {
       background-color:var(--color-background-dark-nav_header_footer);
       color: var(--color-background-light);
       text-shadow: none;
-}
+  }
+  .site-nav select {
+    background-color: var(--color-background-dark);
+    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
+    border: 0.2rem solid var(--color-background-light);
+  }
   .button-links,
   .button-rechts {
-    background-color: var(--color-primary);
+    background-color: var(--color-background-dark-nav_header_footer);
     color: var(--color-base-light);
     box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
     text-shadow: none;
+    border: 0.2rem solid var(--color-background-light);
+  }
+  .button-links:hover,
+  .button-rechts:hover {
+    background-color: var(--color-accent-active-dark);
+  }
+  .scroll-top-button {
+    background-color: var(--color-background-dark-nav_header_footer);
+    border: 0.2rem solid var(--color-background-light);
+    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
+  }
+  .scroll-top-button:hover {
+    background-color: var(--color-accent-active-dark);
   }
 }
 
@@ -611,14 +630,29 @@ ol {
     color: var(--color-background-light);
     text-shadow: none;
   }
-
+  .site-nav select {
+    background-color: var(--color-background-dark);
+    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
+    border: 0.2rem solid var(--color-background-light);
+  }
   .button-links,
   .button-rechts {
-    background-color: var(--color-primary);
+    background-color: var(--color-background-dark-nav_header_footer);
     color: var(--color-base-light);
     box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
     text-shadow: none;
+    border: 0.2rem solid var(--color-background-light);
   }
-
-
+  .button-links:hover,
+  .button-rechts:hover {
+    background-color: var(--color-accent-active-dark);
+  }
+  .scroll-top-button {
+    background-color: var(--color-background-dark-nav_header_footer);
+    border: 0.2rem solid var(--color-background-light);
+    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
+  }
+  .scroll-top-button:hover {
+    background-color: var(--color-accent-active-dark);
+  }
 }
