@@ -443,8 +443,8 @@ ol {
     background-color: var(--color-accent-active);
   }
 
-  .menubutton {
-    display: none !important;
+  .js .menubutton {
+    display: none;
   }
 
   .site-nav {
