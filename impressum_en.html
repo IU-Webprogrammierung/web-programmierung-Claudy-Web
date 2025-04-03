@@ -59,7 +59,8 @@
                 </li>
                 <li>
                     <form action="" method="get">
-                        <select id="language-switcher" onchange="switchLanguage()">
+                        <label for="language-switcher" class="sr-only">Sprache wählen</label>
+                        <select id="language-switcher" lang="en" onchange="switchLanguage()">
                             <option lang="de" value="impressum.html">Deutsch</option>
                             <option lang="en" value="impressum_en.html" selected>English</option>
                         </select>
@@ -81,11 +82,11 @@
                             <a href="tel:+49 1234 56789">+49 1234 56789</a>
                         </p>
                     </div>
-                    <mail>
+                    <div>
                         <p>
                             <a href="mailto:info@mail.de">info@mail.de</a>
                         </p>
-                    </mail>
+                    </div>
                     Manager: John Doe and John Doe
                 </address>
             </article>

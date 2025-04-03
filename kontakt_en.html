@@ -32,9 +32,6 @@
     <script src="script/javascript.js" defer></script>
     <script src="script/dark.js" defer></script>
 
-    <!-- Die Verbindung zum Javascript -->
-    <script src="script/javascript.js" async></script>
-
     <link rel="alternate" href="kontakt.html" hreflang="de">
     <link rel="alternate" href="kontakt_en.html" hreflang="en">
 </head>
@@ -62,7 +59,8 @@
                 </li>
                 <li>
                     <form action="" method="get">
-                        <select id="language-switcher" onchange="switchLanguage()">
+                        <label for="language-switcher" class="sr-only">Sprache wählen</label>
+                        <select id="language-switcher" lang="en" onchange="switchLanguage()">
                             <option lang="de" value="kontakt.html">Deutsch</option>
                             <option lang="en" value="kontakt_en.html" selected>English</option>
                         </select>
@@ -86,7 +84,7 @@
                         </div>
                         <div>
                             <label for="betreff">Subject</label>
-                            <input type="betreff" id="betreff" name="betreff" required oninvalid="this.setCustomValidity('Please fill in this field.')" oninput="this.setCustomValidity('')">
+                            <input type="text" id="betreff" name="betreff" required oninvalid="this.setCustomValidity('Please fill in this field.')" oninput="this.setCustomValidity('')">
                         </div>
                         <div>
                             <label for="nachricht">Message (Optional)</label>
@@ -102,12 +100,12 @@
                             <a href="tel:+49 1234 56789">+49 1234 56789</a>
                         </span>
                     </div>
-                    <mail class="kontakt">
+                    <div class="kontakt">
                         <img id="mailIcon" class="bilder-content" src="pictures/Mail-schwarz.svg" alt="At sign for e-mail" width="50">
                         <span>
                             <a href="mailto:info@mail.de">info@mail.de</a>
                         </span>
-                    </mail>
+                    </div>
                     <address class="kontakt">
                         <img id="hausIcon" class="bilder-content" src="pictures/Haus-schwarz.svg" alt="House sign for the address" width="50">
                         <span>

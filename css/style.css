@@ -176,6 +176,13 @@ ol {
   font-size: x-large;
 }
 
+.sr-only {
+  position: absolute;
+  width: 0rem;
+  height: 0rem;
+  overflow: hidden;
+}
+
 /* Kein JavaScript? Menübutton ausblenden */
 .no-js .menubutton {
   display: none;
