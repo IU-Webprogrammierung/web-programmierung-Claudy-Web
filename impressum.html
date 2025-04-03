@@ -60,11 +60,13 @@
                 </li>
                 <li>
                     <form action="" method="get">
-                        <label for="language-switcher" class="sr-only">Sprache wählen</label>
-                        <select id="language-switcher" lang="en" onchange="switchLanguage()">
-                            <option lang="de" value="impressum.html" selected>Deutsch</option>
-                            <option lang="en" value="impressum_en.html">English</option>
-                        </select>
+                        <div class="language-select-container">
+                            <img src="pictures/Sprache.svg" alt="Sprache wählen" class="language-icon" />
+                            <select id="language-switcher" lang="en" onchange="switchLanguage()">
+                                <option lang="de" value="impressum.html" selected>Deutsch</option>
+                                <option lang="en" value="impressum_en.html">English</option>
+                            </select>
+                        </div>
                     </form>
                 </li>
             </ul>

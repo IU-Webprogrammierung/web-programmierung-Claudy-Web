@@ -176,13 +176,6 @@ ol {
   font-size: x-large;
 }
 
-.sr-only {
-  position: absolute;
-  width: 0rem;
-  height: 0rem;
-  overflow: hidden;
-}
-
 /* Kein JavaScript? Menübutton ausblenden */
 .no-js .menubutton {
   display: none;
@@ -258,6 +251,18 @@ ol {
   cursor: pointer;
   box-shadow: 0 2px 6px var(--color-box-shadow), 0 1px 10px var(--color-box-shadow-smaler);
   font-size: 1rem;
+}
+
+.language-icon {
+  width: 2.0rem;
+  height: auto;
+  padding-right: 1rem;
+}
+
+.language-select-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 
@@ -467,19 +472,20 @@ ol {
   .site-footer li,
   .site-nav li,
   .site-footer-start li {
+    display: flex;
     flex: 1;
     margin-top: 1rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
     z-index: auto;
     margin-right: 0;
+    align-items: center;
   }
-
-  .site-nav img {
+  .darkModeIcon {
     width: 3rem;
     min-width: fit-content;
   }
-
+  
   .article {
     flex-direction: row;
   }
@@ -503,6 +509,7 @@ ol {
   .kontakt span {
     padding-top: 1rem;
   }
+
 }
 
 /* Umrechnung 1024 Pixel / 16px = 64remm*/
