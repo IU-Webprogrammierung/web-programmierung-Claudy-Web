@@ -113,6 +113,10 @@ h2 {
   width: 2.5rem;
 }
 
+.verlinkung p {
+  padding-top: 1rem;
+}
+
 /* Collapsing margins vermeiden */
 h1,
 h2,
