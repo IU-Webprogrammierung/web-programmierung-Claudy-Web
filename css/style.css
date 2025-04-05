@@ -273,6 +273,21 @@ ol {
   gap: 0.5rem;
 }
 
+.sr-only {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+
+.nav-darkmode {
+  max-width: 4rem;
+  flex: 0 0 auto;
+  justify-content: left;
+}
 
 
 /* ================================
@@ -483,11 +498,19 @@ ol {
     display: flex;
     flex: 1;
     margin-top: 1rem;
-    margin-left: 1rem;
+    margin-left: 0rem;
     margin-bottom: 1rem;
     z-index: auto;
     margin-right: 0;
     align-items: center;
+  }
+  .nav-language li {
+    margin-left: auto;
+    flex: 0 0 auto;
+    padding-right: 0rem;
+  }
+  .nav-kontakt {
+    max-width: fit-content;
   }
   .darkModeIcon {
     width: 3rem;
@@ -533,6 +556,15 @@ ol {
 
   .text-content {
     padding-left: 2rem;
+  }
+
+  .nav-kontakt {
+    max-width:inherit;
+  }
+  .site-nav .nav-language {
+    margin-left: auto;
+    flex: 0 0 auto;
+    padding-right: 0rem;
   }
 }
 

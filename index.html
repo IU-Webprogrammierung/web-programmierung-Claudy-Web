@@ -53,20 +53,21 @@
                 <li><a href="index.html" class="current">Startseite</a></li>
                 <li><a href="leistungen.html">Leistungen</a></li>
                 <li><a href="firma.html">Unsere Firma</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li>
+                <li class="nav-kontakt"><a href="kontakt.html">Kontakt</a></li>
+                <li class="nav-darkmode">
                     <button class="toggle-button" onclick="toggleDarkMode()" aria-label="Dark Mode umschalten" 
                     title="Dark Mode umschalten">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
                     </button>
                 </li>
-                <li>
+                <li class="nav-language">
                     <form action="" method="get">
+                        <label for="language-switcher" class="sr-only">Sprache wählen</label>
                         <div class="language-select-container">
                             <img src="pictures/Sprache.svg" alt="Sprache wählen" class="language-icon" />
                             <select id="language-switcher" lang="en" onchange="switchLanguage()">
-                              <option lang="de" value="index.html" selected>Deutsch</option>
-                              <option lang="en" value="index_en.html">English</option>
+                                <option lang="de" value="index.html" selected>Deutsch</option>
+                                <option lang="en" value="index_en.html">English</option>
                             </select>
                         </div>
                     </form>
