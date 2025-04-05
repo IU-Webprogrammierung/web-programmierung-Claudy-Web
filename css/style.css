@@ -117,8 +117,9 @@ h2 {
   padding-top: 1rem;
 }
 
-.li-ohnePunkt {
+.ul-ohnePunkt {
   list-style: none;
+  padding-left: 0rem;
 }
 
 /* Collapsing margins vermeiden */
