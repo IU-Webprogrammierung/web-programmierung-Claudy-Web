@@ -2,11 +2,11 @@
 <html lang="de" class="no-js">
 
 <head>
-    <!-- Infos über diese Webseite -->
+    <!-- Meta-Informationen über die Webseite -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicons -->
+    <!-- Favicons für verschiedene Geräte und Browser -->
     <link rel="icon" type="image/png" href="favicon/favicon96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
@@ -14,32 +14,32 @@
     <meta name="apple-mobile-web-app-title" content="Hausmeisterdienste" />
     <link rel="manifest" href="favicon/site.webmanifest" />
 
-    <!-- Titel der Webseite -->
+    <!-- Titel und Beschreibung der Webseite -->
     <title>Hausmeisterdienste</title>
-
-    <!-- Beschreibung der Webseite -->
     <meta name="description" content="Unsere Hausmeisterdienste bieten Ihnen eine umfassende Betreuung Ihrer 
     Immobilien, die eine professionelle Gartenpflege, eine zuverlässige Objektbetreuung und einen effektiven 
     Winterdienst umfasst.">
 
-    <!-- Schrift Montserrat -->
+    <!-- Einbindung der Schriftart Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <!-- Die Verbindung zum Stylesheet & Javascripts-->
+    <!-- Verknüpfung mit dem Stylesheet und den JavaScript-Dateien -->
     <link href="css/style.css" rel="stylesheet">
     <script src="script/gallerie.js" defer></script>
     <script src="script/javascript.js" defer></script>
     <script src="script/dark.js" defer></script>
 
+    <!-- Alternativ-Links für verschiedene Sprachversionen der Seite -->
     <link rel="alternate" href="https://iu-webprogrammierung.github.io/web-programmierung-Claudy-Web/leistungen.html" hreflang="de">
     <link rel="alternate" href="https://iu-webprogrammierung.github.io/web-programmierung-Claudy-Web/leistungen_en.html" hreflang="en">
 </head>
 
 <body class="site-body">
     <header class="site-header">
+        <!-- Titel und Logo der Webseite -->
         <h1 class="titel">Hausmeisterdienste</h1>
         <div class="logo">
             <img src="pictures/LogoWeißTransparent.svg"
@@ -48,6 +48,7 @@
     </header>
     <nav class="site-nav">
         <div class="inside">
+            <!-- Navigationsmenü mit verschiedenen Links -->
             <button class="menubutton" onclick="this.classList.toggle('showmenu')">Menü</button>
             <ul>
                 <li><a href="index.html">Startseite</a></li>
@@ -55,12 +56,14 @@
                 <li><a href="firma.html">Unsere Firma</a></li>
                 <li class="nav-kontakt"><a href="kontakt.html">Kontakt</a></li>
                 <li class="nav-darkmode">
+                    <!-- Button zum Umschalten des Dark Modes -->
                     <button class="toggle-button" onclick="toggleDarkMode()" aria-label="Dark Mode umschalten" 
                     title="Dark Mode umschalten">
                         <img id="darkModeIcon" src="pictures/moon.svg" alt="Toggle Dark Mode">
                     </button>
                 </li>
                 <li class="nav-language">
+                    <!-- Sprachumschalter mit Dropdown-Menü -->
                     <form action="" method="get">
                         <div class="language-select-container">
                             <img src="pictures/Sprache.svg" alt="Sprache wählen" class="language-icon" />
@@ -79,55 +82,59 @@
             <h2>Winterdienst</h2>
             <article class="article">
                 <div  id="winter" class="gallerie">
-                        <figure>
-                            <img class="gallerie-bilder-winter" src="pictures/Schneefräse420x280.webp" alt="Schneefräse im Einsatz"
-                                srcset="pictures/Schneefräse840x560.webp 2x" data-caption="Schneefräse im Einsatz">
-                                <figcaption>Schneefräse im Einsatz</figcaption>
-                        </figure>
-                        <figure>
-                            <img class="gallerie-bilder-winter" src="pictures/Schnee-schaufeln420x280.webp" alt="Person schaufelt Schnee"
-                                srcset="pictures/Schnee-schaufeln840x560.webp 2x" data-caption="Person schaufelt Schnee">
-                            <figcaption>Person schaufelt Schnee</figcaption>
-                        </figure>
-                        <figure>
-                            <img class="gallerie-bilder-winter" src="pictures/Schneeschippe420x280.webp" alt="Schneeschippe im Vordergrund,
-                                Hintergrund verschwommene Berge" srcset="pictures/Schneeschippe840x560.webp 2x"
-                                data-caption="Schneeschippe im Vordergrund, Hintergrund verschwommene Berge">
-                                <figcaption>Schneeschippe im Vordergrund, Hintergrund verschwommene Berge</figcaption>
-                        </figure>
-                        <div class="gallerie-buttons">
-                            <button class="button-links" onclick="plusDivs(-1, 'winter')">
-                                <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
-                            </button>
-                            <button class="button-rechts" onclick="plusDivs(1, 'winter')">
-                                <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"></img>
-                            </button>
-                        </div>
+                    <!-- Galerie mit Bildern zum Winterdienst -->
+                    <figure>
+                        <img class="gallerie-bilder-winter" src="pictures/Schneefräse420x280.webp" alt="Schneefräse im Einsatz"
+                            srcset="pictures/Schneefräse840x560.webp 2x" data-caption="Schneefräse im Einsatz">
+                            <figcaption>Schneefräse im Einsatz</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-winter" src="pictures/Schnee-schaufeln420x280.webp" alt="Person schaufelt Schnee"
+                            srcset="pictures/Schnee-schaufeln840x560.webp 2x" data-caption="Person schaufelt Schnee">
+                        <figcaption>Person schaufelt Schnee</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallerie-bilder-winter" src="pictures/Schneeschippe420x280.webp" alt="Schneeschippe im Vordergrund,
+                            Hintergrund verschwommene Berge" srcset="pictures/Schneeschippe840x560.webp 2x"
+                            data-caption="Schneeschippe im Vordergrund, Hintergrund verschwommene Berge">
+                            <figcaption>Schneeschippe im Vordergrund, Hintergrund verschwommene Berge</figcaption>
+                    </figure>
+                    <div class="gallerie-buttons">
+                        <!-- Buttons zum Navigieren durch die Galerie -->
+                        <button class="button-links" onclick="plusDivs(-1, 'winter')">
+                            <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
+                        </button>
+                        <button class="button-rechts" onclick="plusDivs(1, 'winter')">
+                            <img src="pictures/button-rechts.svg" class="icon" alt="Doppelpfeil nach rechts"></img>
+                        </button>
                     </div>
-                    <div class="text-content">
-                        <p>
-                            Unser Winterdienst sorgt für Ihre Sicherheit und die uneingeschränkte Nutzbarkeit Ihrer
-                            Verkehrsflächen während der kalten Jahreszeit. Mit unserem zuverlässigen und professionellen Service
-                            gewährleisten wir eine zeitnahe und gründliche Schneeräumung sowie das Streuen von Gehwegen,
-                            Einfahrten, Parkplätzen und anderen betroffenen Flächen.
-                        </p>
-                        <p>
-                            Unser Team ist rund um die Uhr einsatzbereit, um schnell auf winterliche Witterungsbedingungen zu
-                            reagieren. Dank kontinuierlicher Wetterüberwachung sind wir in der Lage, präventive Maßnahmen zu
-                            ergreifen und gefährliche Glättebildung frühzeitig zu verhindern. Hierbei setzen wir auf modernste
-                            Räumgeräte und umweltfreundliche Streumittel, um eine effektive und nachhaltige Lösung anzubieten.
-                        </p>
-                        <p>
-                            Zusätzlich bieten wir individuelle Betreuung und maßgeschneiderte Lösungen für private, gewerbliche
-                            und öffentliche Flächen an. Mit unserem umfassenden Service können Sie sicher sein, dass Ihre
-                            Immobilie auch bei Schnee und Eis jederzeit begehbar und sicher bleibt – ganz ohne Stress und
-                            Aufwand für Sie.
-                        </p>
-                    </div>
+                </div>
+                <div class="text-content">
+                    <!-- Beschreibung des Winterdienstes -->
+                    <p>
+                        Unser Winterdienst sorgt für Ihre Sicherheit und die uneingeschränkte Nutzbarkeit Ihrer
+                        Verkehrsflächen während der kalten Jahreszeit. Mit unserem zuverlässigen und professionellen Service
+                        gewährleisten wir eine zeitnahe und gründliche Schneeräumung sowie das Streuen von Gehwegen,
+                        Einfahrten, Parkplätzen und anderen betroffenen Flächen.
+                    </p>
+                    <p>
+                        Unser Team ist rund um die Uhr einsatzbereit, um schnell auf winterliche Witterungsbedingungen zu
+                        reagieren. Dank kontinuierlicher Wetterüberwachung sind wir in der Lage, präventive Maßnahmen zu
+                        ergreifen und gefährliche Glättebildung frühzeitig zu verhindern. Hierbei setzen wir auf modernste
+                        Räumgeräte und umweltfreundliche Streumittel, um eine effektive und nachhaltige Lösung anzubieten.
+                    </p>
+                    <p>
+                        Zusätzlich bieten wir individuelle Betreuung und maßgeschneiderte Lösungen für private, gewerbliche
+                        und öffentliche Flächen an. Mit unserem umfassenden Service können Sie sicher sein, dass Ihre
+                        Immobilie auch bei Schnee und Eis jederzeit begehbar und sicher bleibt – ganz ohne Stress und
+                        Aufwand für Sie.
+                    </p>
+                </div>
             </article>
             <h2>Gartenpflege</h2>
             <article class="article">
                 <div id="garten" class="gallerie">
+                    <!-- Galerie mit Bildern zur Gartenpflege -->
                     <figure>
                         <img class="gallerie-bilder-garten" src="pictures/Rasen-mähen420x280.webp"
                             alt="Frau mäht Rasen mit Sitzrasenmäher" srcset="pictures/Rasen-mähen840x560.webp 2x"
@@ -146,6 +153,7 @@
                             <figcaption>Vorderansicht eines Rasenmähers</figcaption>
                     </figure>
                     <div class="gallerie-buttons">
+                        <!-- Buttons zum Navigieren durch die Galerie -->
                         <button class="button-links" onclick="plusDivs(-1, 'garten')">
                             <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
                         </button>
@@ -155,6 +163,7 @@
                     </div>
                 </div>
                 <div class="text-content">
+                    <!-- Beschreibung der Gartenpflege -->
                     <p>
                         Unsere Gartenpflege umfasst eine professionelle und ganzheitliche Betreuung Ihrer Grünflächen, um
                         Schönheit, Ordnung und Gesundheit Ihrer Außenanlagen zu bewahren. Wir bieten Ihnen ein breites
@@ -180,6 +189,7 @@
             <h2>Objektbetreuung</h2>
             <article class="article">
                 <div id="objekt" class="gallerie">
+                    <!-- Galerie mit Bildern zur Objektbetreuung -->
                     <figure>
                         <img class="gallerie-bilder-objekt" src="pictures/Objektbetreuung_lila420x280.webp"
                             alt="grün antrazit Gebäude mit Garten" srcset="pictures/Objektbetreuung_lila840x560.webp 2x"
@@ -198,6 +208,7 @@
                             <figcaption>Person schneidet Hecke</figcaption>
                     </figure>
                     <div class="gallerie-buttons">
+                        <!-- Buttons zum Navigieren durch die Galerie -->
                         <button class="button-links" onclick="plusDivs(-1, 'objekt')">
                             <img src="pictures/button-links.svg" class="icon" alt="Doppelpfeil nach links"></img>
                         </button>
@@ -207,6 +218,7 @@
                     </div>
                 </div>
                 <div class="text-content">
+                    <!-- Beschreibung der Objektbetreuung -->
                     <p>
                         Unsere Objektbetreuung bietet Ihnen eine umfassende und professionelle Instandhaltung Ihrer
                         Immobilien und Außenanlagen, um deren Wert, Sicherheit und Funktionalität langfristig zu erhalten.
@@ -232,12 +244,14 @@
                 </div>
             </article>
         </div>
+        <!-- Button zum Scrollen nach oben -->
         <button id="scrollTopButton" class="scroll-top-button" onclick="scrollToTop()">
             <img src="pictures/button-hoch.svg" class="icon" alt="Nach oben">
         </button>
     </main>
     <footer class="site-footer">
         <div class="inside">
+            <!-- Fußzeilennavigation mit Links zu Kontakt, Datenschutz und Impressum -->
             <nav class="footer-nav">
                 <ul>
                     <li><a href="kontakt.html">Kontakt</a></li>

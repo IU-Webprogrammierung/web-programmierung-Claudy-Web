@@ -13,12 +13,14 @@
    9. Media Dark
 ================================ */
 
+
+
 /* ================================
    1. Allgemeine Einstellungen
 ================================ */
 
+/* Farbdefinitionen über CSS-Variablen */
 html {
-  /* Farbvariablen*/
   --color-base-dark: black;
   --color-base-light: white;
   --color-background-light: floralwhite;
@@ -39,11 +41,12 @@ html {
   height: 100vh;
 }
 
+/* Zentrierung von Logo + Titel als Flexbox */
 .titel>a {
   display: flex;
   align-items: center;
 }
-
+/* Basiseinstellungen für Body */
 body {
   display: flex;
   flex-direction: column;
@@ -59,29 +62,37 @@ body {
   padding: 0;
 }
 
+/* Responsive Bilder */
 img {
   height: auto;
   max-width: 100%;
 }
 
+/* Einheitliche Symbolgröße */
 .icon {
   width: 1.5rem;
   max-width: none;
 }
 
+
+
 /* ================================
    2. Layout & Struktur
 ================================ */
+
+/* Innenabstände für Inhaltsblöcke */
 .inside {
   padding: 0 1rem;
   margin: 0 auto;
 }
 
+/* Padding für Hauptbereich */
 main {
   padding: 1rem;
   flex: 1
 }
 
+/* Überschriftenabstände */
 h1 {
   padding-top: 1.5rem;
   margin-bottom: 0;
@@ -92,6 +103,7 @@ h2 {
   text-align: center;
 }
 
+/* Header-Stil mit Flexbox-Ausrichtung */
 .site-header {
   display: flex;
   flex-direction: column;
@@ -113,16 +125,18 @@ h2 {
   width: 2.5rem;
 }
 
+/* Abstand oben für Links am Ende einer Seite */
 .verlinkung p {
   padding-top: 1rem;
 }
 
+/* Listen ohne Aufzählungspunkt */
 .ul-ohnePunkt {
   list-style: none;
   padding-left: 0rem;
 }
 
-/* Collapsing margins vermeiden */
+/* Kollision von vertikalen Außenabständen verhindern */
 h1,
 h2,
 p,
@@ -131,9 +145,13 @@ ol {
   margin-top: 0;
 }
 
+
+
 /* ================================
    3. Navigation
 ================================ */
+
+/* Navigation & Footer: Farben + Layout */
 .site-nav,
 .site-footer {
   background-color: var(--color-primary);
@@ -142,15 +160,17 @@ ol {
   box-shadow: 0 2px 6px var(--color-box-shadow);
 }
 
+/* Linke Ausrichtung Navigation */
 .site-nav {
   text-align: start;
 }
 
+/* Footer mittig */
 .site-footer {
   text-align: center;
 }
 
-/* Navigationsliste als Flex-Container */
+/* Navigation als Flexliste */
 .site-footer ul,
 .site-nav ul {
   display: flex;
@@ -160,7 +180,7 @@ ol {
   margin: 0;
 }
 
-/* Navigationslinks gestalten */
+/* Links in Navigation und Footer */
 .site-nav a,
 .site-footer a,
 .site-nav form {
@@ -170,7 +190,7 @@ ol {
   padding: 0.5rem 1rem;
 }
 
-/* Hover und Focus gestalten */
+/* Hover-Farbe */
 .site-nav a:hover,
 .site-nav a:focus,
 .site-footer a:hover,
@@ -178,19 +198,19 @@ ol {
   color: var(--color-accent-active);
 }
 
-/* Aktuellen Menüpunkt hervorheben */
+/* Aktiver Link fett und größer */
 .site-nav .current,
 .site-footer .current {
   font-weight: bold;
   font-size: x-large;
 }
 
-/* Kein JavaScript? Menübutton ausblenden */
+/* Menübutton ohne JavaScript ausblenden */
 .no-js .menubutton {
   display: none;
 }
 
-/* Menübutton gestalten */
+/* Menübutton Styling */
 .js .menubutton {
   display: flex;
   align-items: center;
@@ -205,6 +225,7 @@ ol {
   margin: 0;
 }
 
+/* Burger-Menü Symbol */
 .js .menubutton::before {
 
   content: url("../pictures/menuburger.svg");
@@ -213,25 +234,25 @@ ol {
   margin: 0.25rem;
 }
 
-/* Menübutton per CSS ausblenden */
-
+/* Navigation bei schmalem Viewport verstecken */
 .js .site-nav ul {
   max-height: 0;
   overflow: hidden;
 }
 
-/* Navigationsliste mit leichter Animation einblenden  */
+/* Navigation aufklappen */
 .js .showmenu+ul {
   max-height: 100rem;
   transition: max-height 0.5s ease-in-out;
   overflow: auto;
 }
 
-/* Tausche Hamburger gegen X */
+/* Menü-Symbol bei Klick tauschen */
 .js .menubutton.showmenu::before {
   content: url("../pictures/menuclose.svg");
 }
 
+/* Zurück-nach-oben Button */
 .scroll-top-button {
   display: none;
   position: fixed;
@@ -247,10 +268,12 @@ ol {
   z-index: 1000;
 }
 
+/* Hover-Farbe Scrollbutton */
 .scroll-top-button:hover {
   background-color: var(--color-accent-active);
 }
 
+/* Sprachumschalter Styling */
 .site-nav select {
   padding: 0.5rem;
   background-color: var(--color-primary);
@@ -262,18 +285,21 @@ ol {
   font-size: 1rem;
 }
 
+/* Sprachsymbol */
 .language-icon {
   width: 2.0rem;
   height: auto;
   padding-right: 1rem;
 }
 
+/* Container für Sprachumschalter + Icon */
 .language-select-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
+/* Element für Screenreader-only Inhalte */
 .sr-only {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -284,6 +310,7 @@ ol {
   border: 0;
 }
 
+/* Begrenzung für Darkmode-Switcher */
 .nav-darkmode {
   max-width: 4rem;
   flex: 0 0 auto;
@@ -291,36 +318,47 @@ ol {
 }
 
 
+
 /* ================================
    4. Startseite
 ================================ */
 
+
+/* Hero-Image zentrieren */
 .startbild {
   display: flex;
   justify-content: center;
   margin: 2rem;
 }
 
+/* Artikelstruktur */
 .article {
   display: flex;
   flex-direction: column;
 }
 
+/* Text immer vor Bild */
 .text-content {
   order: 1;
 }
 
+
+
 /* ================================
    5. Kontaktseite
 ================================ */
+
+/* Formular-Label */
 .site-kontakt label {
   display: block;
 }
 
+/* Abstand zwischen Eingabefeldern */
 .site-kontakt form div {
   margin-bottom: 1rem;
 }
 
+/* Eingabefelder Styling */
 .site-kontakt input[type="text"],
 .site-kontakt input[type="email"],
 .site-kontakt input[type="betreff"],
@@ -334,12 +372,13 @@ ol {
   border-radius: 0.25rem;
 }
 
-/* Nachricht - Breite begrenzen */
+/* Textarea spezifisch begrenzen */
 .site-kontakt textarea {
   max-width: 25rem;
   min-height: 8rem;
 }
 
+/* Formularbutton */
 .site-kontakt button {
   font-size: inherit;
   font-family: inherit;
@@ -352,11 +391,13 @@ ol {
   cursor: pointer;
 }
 
+/* Button Hover */
 .site-kontakt button:hover,
 .site-kontakt button:focus {
   background-color: var(--color-accent-active);
 }
 
+/* Kontaktinfos */
 .kontakt {
   margin: 1rem;
   display: flex;
@@ -377,6 +418,8 @@ ol {
 /* ================================
    6. Bildergalerie
 ================================ */
+
+/* Galerie-Container */
 .gallerie {
   display: flex;
   flex-direction: column;
@@ -390,6 +433,7 @@ ol {
   width: 100%;
 }
 
+/* Bild zentrieren */
 .gallerie figure img {
   display: block;
   margin: 0 auto;
@@ -400,6 +444,7 @@ ol {
   margin-top: 0.5rem;
 }
 
+/* Buttons unter der Galerie */
 .gallerie-buttons {
   display: flex;
   justify-content: center;
@@ -407,6 +452,7 @@ ol {
   margin-top: 0.5rem;
 }
 
+/* Navigationspfeile */
 .button-links,
 .button-rechts {
   background-color: var(--color-primary);
@@ -427,9 +473,11 @@ ol {
 }
 
 
+
 /* ================================
    7. Media Queries
 ================================ */
+
 /* Umrechnung 940 Pixel / 16px = 58.75remm*/
 @media screen and (min-width: 58.75rem) {
 
@@ -505,19 +553,22 @@ ol {
     margin-right: 0;
     align-items: center;
   }
+
   .nav-language li {
     margin-left: auto;
     flex: 0 0 auto;
     padding-right: 0rem;
   }
+
   .nav-kontakt {
     max-width: fit-content;
   }
+
   .darkModeIcon {
     width: 3rem;
     min-width: fit-content;
   }
-  
+
   .article {
     flex-direction: row;
   }
@@ -560,8 +611,9 @@ ol {
   }
 
   .nav-kontakt {
-    max-width:inherit;
+    max-width: inherit;
   }
+
   .site-nav .nav-language {
     margin-left: auto;
     flex: 0 0 auto;
@@ -569,9 +621,12 @@ ol {
   }
 }
 
+
+
 /* ================================
    8. Media Print
 ================================ */
+
 @media print {
 
   * {
@@ -604,34 +659,41 @@ ol {
   cursor: pointer;
   max-width: fit-content;
 }
+
 .dark-mode.site-body {
   background-color: var(--color-background-dark);
   color: var(--color-background-light);
   text-shadow: none;
 }
+
 .dark-mode .site-kontakt-adresse a,
 .dark-mode .adresse a {
   color: var(--color-accent-active);
 }
+
 .dark-mode .site-kontakt-adresse a:hover,
 .dark-mode .site-kontakt-adresse a:focus,
 .dark-mode .adresse a:hover,
 .dark-mode .adresse a:focus {
   color: var(--color-primary);
 }
+
 .dark-mode {
+
   .site-header,
   .site-nav,
   .site-footer {
-      background-color:var(--color-background-dark-nav_header_footer);
-      color: var(--color-background-light);
-      text-shadow: none;
+    background-color: var(--color-background-dark-nav_header_footer);
+    color: var(--color-background-light);
+    text-shadow: none;
   }
+
   .site-nav select {
     background-color: var(--color-background-dark);
     box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
     border: 0.2rem solid var(--color-background-light);
   }
+
   .button-links,
   .button-rechts {
     background-color: var(--color-background-dark-nav_header_footer);
@@ -640,15 +702,18 @@ ol {
     text-shadow: none;
     border: 0.2rem solid var(--color-background-light);
   }
+
   .button-links:hover,
   .button-rechts:hover {
     background-color: var(--color-accent-active-dark);
   }
+
   .scroll-top-button {
     background-color: var(--color-background-dark-nav_header_footer);
     border: 0.2rem solid var(--color-background-light);
     box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
   }
+
   .scroll-top-button:hover {
     background-color: var(--color-accent-active-dark);
   }
@@ -663,33 +728,40 @@ ol {
     border: none;
     cursor: pointer;
   }
+
   body {
     background-color: var(--color-background-dark);
     color: var(--color-background-light);
     text-shadow: none;
   }
+
   .dark-mode .site-kontakt-adresse a,
   .dark-mode .adresse a {
-    color: var(--color-accent-active); /* Kontrastfarbe für Links */
+    color: var(--color-accent-active);
+    /* Kontrastfarbe für Links */
   }
+
   .dark-mode .site-kontakt-adresse a:hover,
   .dark-mode .site-kontakt-adresse a:focus,
   .dark-mode .adresse a:hover,
   .dark-mode .adresse a:focus {
     color: var(--color-primary);
   }
+
   .site-nav,
   .site-header,
   .site-footer {
-    background-color:var(--color-background-dark-nav_header_footer);
+    background-color: var(--color-background-dark-nav_header_footer);
     color: var(--color-background-light);
     text-shadow: none;
   }
+
   .site-nav select {
     background-color: var(--color-background-dark);
     box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
     border: 0.2rem solid var(--color-background-light);
   }
+
   .button-links,
   .button-rechts {
     background-color: var(--color-background-dark-nav_header_footer);
@@ -698,15 +770,18 @@ ol {
     text-shadow: none;
     border: 0.2rem solid var(--color-background-light);
   }
+
   .button-links:hover,
   .button-rechts:hover {
     background-color: var(--color-accent-active-dark);
   }
+
   .scroll-top-button {
     background-color: var(--color-background-dark-nav_header_footer);
     border: 0.2rem solid var(--color-background-light);
     box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
   }
+
   .scroll-top-button:hover {
     background-color: var(--color-accent-active-dark);
   }

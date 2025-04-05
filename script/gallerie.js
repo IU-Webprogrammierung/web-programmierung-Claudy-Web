@@ -1,3 +1,4 @@
+// Funktion zur Überprüfung und Rückgabe der entsprechenden Galerie-Elemente basierend auf der Galerie-ID
 function checkGalleries(gallerieId) {
   switch (gallerieId) {
     case 'start':
@@ -15,8 +16,10 @@ function checkGalleries(gallerieId) {
 
 var slideIndex = 1;
 
+// Zeigt die Bilder der Galerie an, beginnend mit dem ersten Bild
 showDivs(slideIndex);
 
+// Funktion zum Anzeigen der Bilder in der Galerie
 function showDivs(n, gallerieId) {
   var i;
   var x = checkGalleries(gallerieId);
@@ -43,16 +46,18 @@ function showDivs(n, gallerieId) {
 
   x[slideIndex - 1].style.display = "block";
   if (captions[slideIndex - 1]) {
-    captions[slideIndex - 1].style.display = "block"; // Anzeigen der aktuelle Bezeichnung
+    captions[slideIndex - 1].style.display = "block"; // Anzeigen der aktuellen Bezeichnung
   }
 }
 
+// Initialisiert die Galerien beim Laden des Dokuments
 document.addEventListener("DOMContentLoaded", function () {
   initGalleries();
 });
 
 const galleryIndices = {}; // Speichert die aktuellen Indizes für jede Galerie separat
 
+// Funktion zur Initialisierung der Galerien
 function initGalleries() {
   const galleries = document.querySelectorAll(".gallerie");
 
@@ -69,6 +74,7 @@ function initGalleries() {
   });
 }
 
+// Funktion zum Wechseln der Bilder in der Galerie
 function plusDivs(n, galleryId) {
   let gallery = document.getElementById(galleryId);
   let figures = gallery.querySelectorAll("figure");
@@ -88,6 +94,7 @@ function plusDivs(n, galleryId) {
   galleryIndices[galleryId] = newIndex;
 }
 
+// Funktion zum Zurücksetzen der Galerie auf das erste Bild
 function resetGallery(galleryId) {
   let gallery = document.getElementById(galleryId);
   let figures = gallery.querySelectorAll("figure");
@@ -101,7 +108,7 @@ function resetGallery(galleryId) {
   galleryIndices[galleryId] = 0;
 }
 
-// Falls die Tabs (Gartenpflege, Objektbetreuung) durch Buttons gesteuert werden:
+// Event-Listener für Tab-Buttons, um die Galerie zurückzusetzen
 document.querySelectorAll(".tab-button").forEach(button => {
   button.addEventListener("click", function () {
       const targetGallery = this.getAttribute("data-target"); // Annahme: Button hat data-target mit der ID der Galerie
