@@ -478,7 +478,7 @@ ol {
    7. Media Queries
 ================================ */
 
-/* Umrechnung 940 Pixel / 16px = 58.75remm*/
+/* Umrechnung 940 Pixel / 16px = 58.75rem*/
 @media screen and (min-width: 58.75rem) {
 
   body {
@@ -595,7 +595,7 @@ ol {
 
 }
 
-/* Umrechnung 1024 Pixel / 16px = 64remm*/
+/* Umrechnung 1024 Pixel / 16px = 64rem*/
 @media screen and (min-width: 64rem) {
 
   body {
