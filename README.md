@@ -65,5 +65,6 @@ Abgabe: April 2025
 
 ## Lizenz
 
-📄 Dieses Projekt dient ausschließlich der Demonstration im Rahmen einer Prüfung.  
+📄 Dieses Projekt dient ausschließlich der Demonstration im Rahmen einer Prüfung.
+Alle Bilder wurden KI-generiert mithilfe von firefly.adobe.com - Public Domain Mark
 Keine kommerzielle Nutzung vorgesehen.

@@ -143,6 +143,10 @@ h2 {
   padding-left: 0rem;
 }
 
+.angebot {
+  margin-top: 2rem;
+}
+
 /* Kollision von vertikalen Außenabständen verhindern */
 h1,
 h2,
