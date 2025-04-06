@@ -26,6 +26,7 @@ html {
   --color-background-light: floralwhite;
   --color-primary: teal;
   --color-accent-active: sandybrown;
+  --color-urheber: grey;
   --color-shadow: rgba(0, 0, 0, 0.15);
   --color-box-shadow: rgba(51, 51, 51, 0.3);
   --color-box-shadow-smaler: rgb(51, 51, 51, 0.29);
@@ -72,6 +73,12 @@ img {
 .icon {
   width: 1.5rem;
   max-width: none;
+}
+
+u {
+  text-decoration: none;
+  color: var(--color-urheber);
+  font-size: small;
 }
 
 
