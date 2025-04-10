@@ -113,7 +113,7 @@ h2 {
 /* Header-Stil mit Flexbox-Ausrichtung */
 .site-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   background-color: var(--color-primary);
   color: var(--color-base-light);
@@ -125,10 +125,7 @@ h2 {
 }
 
 .logo {
-  padding-top: 1rem;
-  padding-right: 1rem;
-  padding-left: 0rem;
-  padding-bottom: 0rem;
+  padding: 1rem 1rem 0rem 1rem;
   width: 2.5rem;
 }
 
@@ -376,7 +373,7 @@ ol {
 .site-kontakt textarea {
   font-size: inherit;
   font-family: inherit;
-  width: 16rem;
+  width: 100%;
   padding: 0.5rem;
   border: 1px solid var(--color-border);
   background-color: var(--color-base-light);
@@ -385,7 +382,6 @@ ol {
 
 /* Textarea spezifisch begrenzen */
 .site-kontakt textarea {
-  max-width: 25rem;
   min-height: 8rem;
 }
 
@@ -410,7 +406,6 @@ ol {
 
 /* Kontaktinfos */
 .kontakt {
-  margin: 1rem;
   display: flex;
   align-items: center;
 }
@@ -423,6 +418,30 @@ ol {
 .kontakt::before {
   margin-top: 2rem;
 }
+
+.kontakt-telefon {
+  background: url("/pictures/Telefon-schwarz.svg") left;
+}
+
+.kontakt-mail {
+  background: url("/pictures/Mail-schwarz.svg") left;
+}
+
+.kontakt-haus {
+  background: url("/pictures/Haus-schwarz.svg") left;
+}
+
+.kontakt-telefon, 
+.kontakt-mail,
+.kontakt-haus {
+  margin: 2rem 0 0 0 ;
+  padding: 0 1.25rem 0 3.75rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 3.125rem;
+  line-height: 3.125rem;
+  width: 31.25rem;
+  }
 
 
 
@@ -588,6 +607,10 @@ ol {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 1rem;
+  }
+
+  .site-kontakt-adresse {
+    margin-left: 2rem;
   }
 
   .kontakt {
