@@ -46,6 +46,7 @@ html {
 .titel>a {
   display: flex;
   align-items: center;
+  
 }
 /* Basiseinstellungen für Body */
 body {
@@ -81,6 +82,16 @@ u {
   font-size: small;
 }
 
+a {
+  color: var(--color-base-dark);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent-active);
+}
+
 
 
 /* ================================
@@ -114,19 +125,37 @@ h2 {
 .site-header {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   background-color: var(--color-primary);
   color: var(--color-base-light);
   padding: 2rem 3.5rem;
+  text-decoration: none;
+}
+
+.site-header titel {
+  text-decoration: none;
+  align-items: center;
 }
 
 .titel {
-  font-size: clamp(1rem, 2.8vw, 2.5rem);
+  color: var(--color-base-light);
+  margin: 0 0 0 0;
+  padding: 0 1rem 0 0;
+  display: inline-block;
+  background: url("/pictures/LogoWeißTransparent.svg") right;
+  background-repeat: no-repeat;
+  background-size: 3.125rem;
+  line-height: 3.125rem;
+  width: 14rem;
+
+}
+.titel h1 {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  font-size: 1rem;
 }
 
-.logo {
-  padding: 1rem 1rem 0rem 1rem;
-  width: 2.5rem;
+.site-header a {
+  text-decoration: none;
 }
 
 /* Abstand oben für Links am Ende einer Seite */
@@ -336,7 +365,7 @@ ol {
 .startbild {
   display: flex;
   justify-content: center;
-  margin: 2rem;
+  margin: 2rem 0 2rem 0;
 }
 
 /* Artikelstruktur */
@@ -520,13 +549,20 @@ ol {
     padding: 1rem;
   }
 
+  .inside {
+    padding: 0 0 0 1.5rem;
+  }
+
   .site-header {
     flex-direction: row;
   }
 
-  .logo {
-    padding-bottom: 1rem;
-    width: 4rem;
+  .titel {
+    width: 25rem;
+  }
+
+  .titel h1 {
+    font-size: 2rem;
   }
 
   .gallerie {
@@ -716,7 +752,8 @@ ol {
 
   .site-header,
   .site-nav,
-  .site-footer {
+  .site-footer,
+  .titel {
     background-color: var(--color-background-dark-nav_header_footer);
     color: var(--color-background-light);
     text-shadow: none;
@@ -742,6 +779,11 @@ ol {
     background-color: var(--color-accent-active-dark);
   }
 
+  .titel:focus,
+  .titel:hover {
+    color: var(--color-accent-active);
+  }
+
   .scroll-top-button {
     background-color: var(--color-background-dark-nav_header_footer);
     border: 0.2rem solid var(--color-background-light);
@@ -751,6 +793,30 @@ ol {
   .scroll-top-button:hover {
     background-color: var(--color-accent-active-dark);
   }
+
+  .kontakt-telefon {
+    background: url("/pictures/Telefon-weiß.svg") left;
+  }
+  
+  .kontakt-mail {
+    background: url("/pictures/Mail-weiß.svg") left;
+  }
+  
+  .kontakt-haus {
+    background: url("/pictures/Haus-weiß.svg") left;
+  }
+  
+  .kontakt-telefon, 
+  .kontakt-mail,
+  .kontakt-haus {
+    margin: 2rem 0 0 0 ;
+    padding: 0 1.25rem 0 3.75rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 3.125rem;
+    line-height: 3.125rem;
+    width: 31.25rem;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -778,13 +844,16 @@ ol {
   .dark-mode .site-kontakt-adresse a:hover,
   .dark-mode .site-kontakt-adresse a:focus,
   .dark-mode .adresse a:hover,
-  .dark-mode .adresse a:focus {
+  .dark-mode .adresse a:focus
+  .dark-mode .titel a:hover,
+  .dark-mode .titel a:focus {
     color: var(--color-primary);
   }
 
   .site-nav,
   .site-header,
-  .site-footer {
+  .site-footer,
+  .titel {
     background-color: var(--color-background-dark-nav_header_footer);
     color: var(--color-background-light);
     text-shadow: none;
@@ -819,4 +888,29 @@ ol {
   .scroll-top-button:hover {
     background-color: var(--color-accent-active-dark);
   }
+
+  
+  .kontakt-telefon {
+    background: url("/pictures/Telefon-weiß.svg") left;
+  }
+  
+  .kontakt-mail {
+    background: url("/pictures/Mail-weiß.svg") left;
+  }
+  
+  .kontakt-haus {
+    background: url("/pictures/Haus-weiß.svg") left;
+  }
+  
+  .kontakt-telefon, 
+  .kontakt-mail,
+  .kontakt-haus {
+    margin: 2rem 0 0 0 ;
+    padding: 0 1.25rem 0 3.75rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 3.125rem;
+    line-height: 3.125rem;
+    width: 31.25rem;
+    }
 }
