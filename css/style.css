@@ -116,9 +116,12 @@ h1 {
   margin-bottom: 0;
 }
 
+.inside h1 {
+  text-align: center;
+}
+
 h2 {
   padding-top: 2.5rem;
-  text-align: center;
 }
 
 /* Header-Stil mit Flexbox-Ausrichtung */
@@ -148,7 +151,7 @@ h2 {
   width: 14rem;
 
 }
-.titel h1 {
+.site-header .titel h1 {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   font-size: 1rem;
@@ -544,9 +547,9 @@ ol {
     font-size: 1.125rem;
   }
 
-  h1 {
-    font-size: 2.5rem;
-    padding: 1rem;
+  .site-header .titel h1 {
+    font-size: 2rem;
+    width: 25rem
   }
 
   .inside {
@@ -559,10 +562,6 @@ ol {
 
   .titel {
     width: 25rem;
-  }
-
-  .titel h1 {
-    font-size: 2rem;
   }
 
   .gallerie {
