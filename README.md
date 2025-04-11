@@ -4,7 +4,7 @@
 
 Dies ist eine zweisprachige, barrierearme und responsive Website für einen Hausmeisterservice. Die Seite informiert über Leistungen, das Unternehmen, bietet ein Kontaktformular und berücksichtigt rechtliche Anforderungen durch ein vollständiges Impressum und eine Datenschutzerklärung.
 
-## Verwendete Technologien
+## Verwendete Technologien 
 
 - HTML5 & CSS3 (semantische Struktur, responsive Layouts)
 - JavaScript (für Dark Mode, Navigation und Galerie)

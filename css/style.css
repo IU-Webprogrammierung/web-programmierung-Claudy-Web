@@ -144,7 +144,7 @@ h2 {
   margin: 0 0 0 0;
   padding: 0 1rem 0 0;
   display: inline-block;
-  background: url("/pictures/LogoWeißTransparent.svg") right;
+  background: url("../pictures/LogoWeißTransparent.svg") right;
   background-repeat: no-repeat;
   background-size: 3.125rem;
   line-height: 3.125rem;
@@ -452,15 +452,15 @@ ol {
 }
 
 .kontakt-telefon {
-  background: url("/pictures/Telefon-schwarz.svg") left;
+  background: url("../pictures/Telefon-schwarz.svg") left;
 }
 
 .kontakt-mail {
-  background: url("/pictures/Mail-schwarz.svg") left;
+  background: url("../pictures/Mail-schwarz.svg") left;
 }
 
 .kontakt-haus {
-  background: url("/pictures/Haus-schwarz.svg") left;
+  background: url("../pictures/Haus-schwarz.svg") left;
 }
 
 .kontakt-telefon, 
@@ -794,15 +794,15 @@ ol {
   }
 
   .kontakt-telefon {
-    background: url("/pictures/Telefon-weiß.svg") left;
+    background: url("../pictures/Telefon-weiß.svg") left;
   }
   
   .kontakt-mail {
-    background: url("/pictures/Mail-weiß.svg") left;
+    background: url("../pictures/Mail-weiß.svg") left;
   }
   
   .kontakt-haus {
-    background: url("/pictures/Haus-weiß.svg") left;
+    background: url("../pictures/Haus-weiß.svg") left;
   }
   
   .kontakt-telefon, 
@@ -890,15 +890,15 @@ ol {
 
   
   .kontakt-telefon {
-    background: url("/pictures/Telefon-weiß.svg") left;
+    background: url("../pictures/Telefon-weiß.svg") left;
   }
   
   .kontakt-mail {
-    background: url("/pictures/Mail-weiß.svg") left;
+    background: url("../pictures/Mail-weiß.svg") left;
   }
   
   .kontakt-haus {
-    background: url("/pictures/Haus-weiß.svg") left;
+    background: url("../pictures/Haus-weiß.svg") left;
   }
   
   .kontakt-telefon, 
