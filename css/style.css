@@ -26,7 +26,7 @@ html {
   --color-background-light: floralwhite;
   --color-primary: teal;
   --color-accent-active: sandybrown;
-  --color-urheber: grey;
+  --color-urheber: rgb(20, 20, 20);
   --color-shadow: rgba(0, 0, 0, 0.15);
   --color-box-shadow: rgba(51, 51, 51, 0.3);
   --color-box-shadow-smaler: rgb(51, 51, 51, 0.29);
@@ -79,7 +79,7 @@ img {
 u {
   text-decoration: none;
   color: var(--color-urheber);
-  font-size: small;
+  font-size: smaller;
 }
 
 a {
