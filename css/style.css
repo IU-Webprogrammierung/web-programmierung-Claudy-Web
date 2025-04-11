@@ -134,11 +134,6 @@ h2 {
   text-decoration: none;
 }
 
-.site-header titel {
-  text-decoration: none;
-  align-items: center;
-}
-
 .titel {
   color: var(--color-base-light);
   margin: 0 0 0 0;
@@ -218,6 +213,10 @@ ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.site-nav li:not(.nav-language):not(.nav-darkmode) {
+  flex: 1;
 }
 
 /* Links in Navigation und Footer */
@@ -342,7 +341,7 @@ ol {
 /* Element für Screenreader-only Inhalte */
 .sr-only {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip-path: rect(0 0 0 0 round 0);
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -401,7 +400,7 @@ ol {
 /* Eingabefelder Styling */
 .site-kontakt input[type="text"],
 .site-kontakt input[type="email"],
-.site-kontakt input[type="betreff"],
+.site-kontakt #betreff,
 .site-kontakt textarea {
   font-size: inherit;
   font-family: inherit;
@@ -451,11 +450,13 @@ ol {
   margin-top: 2rem;
 }
 
-.kontakt-telefon {
+.kontakt-telefon,
+.firma-telefon {
   background: url("../pictures/Telefon-schwarz.svg") left;
 }
 
-.kontakt-mail {
+.kontakt-mail,
+.firma-mail {
   background: url("../pictures/Mail-schwarz.svg") left;
 }
 
@@ -473,6 +474,17 @@ ol {
   background-size: 3.125rem;
   line-height: 3.125rem;
   width: 31.25rem;
+  }
+
+  .firma-mail,
+  .firma-telefon {
+    margin: 0 0 1rem 0;
+    padding: 0 1.25rem 0 3.75rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 3.125rem;
+    line-height: 3.125rem;
+    width: 31.25rem;
   }
 
 
@@ -719,6 +731,7 @@ ol {
    9. Media Dark
 ================================ */
 
+
 .toggle-button {
   background: none;
   display: inline-block;
@@ -729,22 +742,25 @@ ol {
   max-width: fit-content;
 }
 
-.dark-mode.site-body {
+.site-body.dark-mode {
   background-color: var(--color-background-dark);
   color: var(--color-background-light);
   text-shadow: none;
 }
 
 .dark-mode .site-kontakt-adresse a,
+.dark-mode .site-firma-adresse a,
 .dark-mode .adresse a {
-  color: var(--color-accent-active);
+  color: var(--color-background-light);
 }
 
 .dark-mode .site-kontakt-adresse a:hover,
 .dark-mode .site-kontakt-adresse a:focus,
-.dark-mode .adresse a:hover,
-.dark-mode .adresse a:focus {
-  color: var(--color-primary);
+.dark-mode .site-firma-adresse a:hover,
+.dark-mode .site-firma-adresse  a:focus,
+.adresse .dark-mode a:hover,
+.adresse .dark-mode a:focus {
+  color: var(--color-accent-active);
 }
 
 .dark-mode {
@@ -793,11 +809,13 @@ ol {
     background-color: var(--color-accent-active-dark);
   }
 
-  .kontakt-telefon {
+  .kontakt-telefon,
+  .firma-telefon {
     background: url("../pictures/Telefon-weiß.svg") left;
   }
   
-  .kontakt-mail {
+  .kontakt-mail,
+  .firma-mail {
     background: url("../pictures/Mail-weiß.svg") left;
   }
   
@@ -815,101 +833,17 @@ ol {
     background-size: 3.125rem;
     line-height: 3.125rem;
     width: 31.25rem;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-  .toggle-button {
-    background: none;
-    display: inline-block;
-    padding: 0.625rem 1rem;
-    margin-left: 0rem;
-    border: none;
-    cursor: pointer;
-  }
-
-  body {
-    background-color: var(--color-background-dark);
     color: var(--color-background-light);
-    text-shadow: none;
   }
-
-  .dark-mode .site-kontakt-adresse a,
-  .dark-mode .adresse a {
-    color: var(--color-accent-active);
-    /* Kontrastfarbe für Links */
-  }
-
-  .dark-mode .site-kontakt-adresse a:hover,
-  .dark-mode .site-kontakt-adresse a:focus,
-  .dark-mode .adresse a:hover,
-  .dark-mode .adresse a:focus
-  .dark-mode .titel a:hover,
-  .dark-mode .titel a:focus {
-    color: var(--color-primary);
-  }
-
-  .site-nav,
-  .site-header,
-  .site-footer,
-  .titel {
-    background-color: var(--color-background-dark-nav_header_footer);
-    color: var(--color-background-light);
-    text-shadow: none;
-  }
-
-  .site-nav select {
-    background-color: var(--color-background-dark);
-    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
-    border: 0.2rem solid var(--color-background-light);
-  }
-
-  .button-links,
-  .button-rechts {
-    background-color: var(--color-background-dark-nav_header_footer);
-    color: var(--color-base-light);
-    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
-    text-shadow: none;
-    border: 0.2rem solid var(--color-background-light);
-  }
-
-  .button-links:hover,
-  .button-rechts:hover {
-    background-color: var(--color-accent-active-dark);
-  }
-
-  .scroll-top-button {
-    background-color: var(--color-background-dark-nav_header_footer);
-    border: 0.2rem solid var(--color-background-light);
-    box-shadow: 0 2px 6px var(--color-box-shadow-dark), 0 1px 10px var(--color-box-shadow-dark-smaler);
-  }
-
-  .scroll-top-button:hover {
-    background-color: var(--color-accent-active-dark);
-  }
-
-  
-  .kontakt-telefon {
-    background: url("../pictures/Telefon-weiß.svg") left;
-  }
-  
-  .kontakt-mail {
-    background: url("../pictures/Mail-weiß.svg") left;
-  }
-  
-  .kontakt-haus {
-    background: url("../pictures/Haus-weiß.svg") left;
-  }
-  
-  .kontakt-telefon, 
-  .kontakt-mail,
-  .kontakt-haus {
-    margin: 2rem 0 0 0 ;
+  .firma-mail,
+  .firma-telefon {
+    margin: 0 0 1rem 0;
     padding: 0 1.25rem 0 3.75rem;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 3.125rem;
     line-height: 3.125rem;
     width: 31.25rem;
-    }
+    color: var(--color-background-light);
+  }
 }
